@@ -4,7 +4,7 @@
 		 
 		<div class="row">
        	 <div class="col-lg-12">
-            <h1 class="page-header">List of Location  <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i> New</a>  </h1>
+            <h1 class="page-header">Lista de Ubicaciones  <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i> NUEVO</a>  </h1>
        		</div>
         	<!-- /.col-lg-12 -->
    		 </div>
@@ -14,9 +14,9 @@
 					
 				  <thead>
 				  	<tr>  
-				  		<th>Place</th> 
-				  		<th>Delivery Fee</th>  
-				  		<th>Action</th>
+				  		<th>Lugar</th> 
+				  		<th>Gastos de envío</th>  
+				  		<th>Acción</th>
 				  	</tr>	
 				  </thead> 	
 
@@ -33,7 +33,7 @@
 				  		echo '<td> &#36 '.  number_format($result->DELPRICE,2).'</td>'; 
 				  		echo
 				  		 '<td align="left">
-							<a href="'.web_root.'admin/settings/index.php?view=edit&id='.$result->SETTINGID.'" class="btn btn-primary btn-xs">Edit</a>
+							<a href="'.web_root.'admin/settings/index.php?view=edit&id='.$result->SETTINGID.'" class="btn btn-primary btn-xs">EDITAR</a>
 						 </td>';
 				  	} 
 				  	?>

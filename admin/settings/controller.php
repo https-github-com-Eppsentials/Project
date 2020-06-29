@@ -11,8 +11,7 @@ switch ($action) {
 	
 	case 'edit' :
 	doEdit();
-	break;
-
+	break; 
 	case 'editStatus' :
 	editStatus();
 	break;
@@ -36,31 +35,20 @@ switch ($action) {
 
    
 function doInsert(){
-	if(isset($_POST['save'])){
-		
-	  
-
-
+	if(isset($_POST['save'])){ 
   				 	 	$product = New Setting();  
 						$product->PLACE 		= $_POST['PLACE']; 
 						$product->BRGY 			= $_POST['BRGY']; 
 						$product->DELPRICE 		= $_POST['DELPRICE']; 
 						$product->create(); 
    
-						message("New location created successfully!", "success");
-						redirect("index.php");
-		 
-				 
-		  }
-
-
+						message("¡Nueva ubicación creada con éxito!", "success");
+						redirect("index.php"); 
+		  }  
 	  }
  
  
-	function doEdit(){
- 
-
-
+	function doEdit(){ 
 		if(isset($_POST['save'])){
  
 					
@@ -71,7 +59,7 @@ function doInsert(){
 						$product->update($_POST['SETTINGID']);
   
 
-			message("Location has been updated!", "success");
+			message("¡La ubicación ha sido actualizada!", "success");
 			redirect("index.php");
 	  }
 	redirect("index.php"); 
@@ -79,14 +67,14 @@ function doInsert(){
 
  function editStatus(){
  	
-	if (@$_GET['stats']=='NotAvailable'){
+	if (@$_GET['stats']=='Oculto'){
 		$product = New Product();
-		$product->PROSTATS	= 'Available';
+		$product->PROSTATS	= 'Disponible';
 		$product->update(@$_GET['id']);
 
-	}elseif(@$_GET['stats']=='Available'){
+	}elseif(@$_GET['stats']=='Disponible'){
 		$product = New Product();
-		$product->PROSTATS	= 'NotAvailable';
+		$product->PROSTATS	= 'Oculto';
 		$product->update(@$_GET['id']);
 	}else{
 
@@ -119,7 +107,7 @@ function doInsert(){
 		$promo->PROBANNER  =1;    
 		$promo->update($_POST['PROID']);
 
-		msgBox("Discount has been set.");
+		msgBox("El descuento se ha establecido.");
 
 		redirect("index.php"); 
  		}

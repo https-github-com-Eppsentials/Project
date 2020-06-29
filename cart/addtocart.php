@@ -182,14 +182,14 @@ if (isset($_POST['updateid'])){
                   <button class="close" data-dismiss="modal" type=
                   "button">×</button>
 
-                  <h4 class="modal-title" id="myModalLabel">Have already an account?</h4>
+                  <h4 class="modal-title" id="myModalLabel">¿Ya tiene una cuenta?</h4>
                 </div>
  
                   <div class="modal-body" > 
 
                 <ul class="nav nav-tabs" id="myTab">
-                  <li class="active"><a href="#home" data-toggle="tab">Login</a></li> 
-                  <li><a href="#settings" data-toggle="tab">Register</a></li>
+                  <li class="active"><a href="#home" data-toggle="tab">Loguearse</a></li> 
+                  <li><a href="#settings" data-toggle="tab">Registrarse</a></li>
                 </ul>
                     <!-- <h2>Login</h2> -->
                     <div class="tab-content"> 
@@ -207,11 +207,11 @@ if (isset($_POST['updateid'])){
                               </div>
                               </div>
                               <div class="modal-footer">
-                              <p align="left">&copy; Fix N Mix Ordering System</p>
+                              <p align="left">&copy; APPOLLO</p>
                               <button class="btn btn-default"   data-dismiss="modal" type=
                               "button">Close</button>  
                               <button class="btn btn_fixnmix"
-                              name="MbtnLogin" type="submit">Sign In</button>
+                              name="MbtnLogin" type="submit">Registrarse</button>
                             </div>
                             
                           </div>
@@ -233,11 +233,11 @@ if (isset($_POST['updateid'])){
                 <div class="form-group">
                     <div class="col-md-10">
                       <label class="col-md-4 control-label" for=
-                      "FIRSTNAME">First Name:</label>
+                      "FIRSTNAME">Nombres:</label>
                       <input  id="CUSTOMERID" name="CUSTOMERID"  type="HIDDEN" value="<?php echo $res->AUTO; ?>"> 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="FIRSTNAME" name="FIRSTNAME" placeholder=
-                            "First Name" type="text" value="">
+                            "Nombres" type="text" value="">
                       </div>
                     </div>
                   </div>
@@ -245,27 +245,27 @@ if (isset($_POST['updateid'])){
                   <div class="form-group">
                     <div class="col-md-10">
                       <label class="col-md-4 control-label" for=
-                      "LASTNAME">Last Name:</label>
+                      "LASTNAME">Apellidos:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="LASTNAME" name="LASTNAME" placeholder=
-                            "Last Name" type="text" value="">
+                            "Apellidos" type="text" value="">
                       </div>
                     </div>
                   </div>
 
                   
                 <div class="panel panel-default">
-                <div class="panel-head" style="margin-left:3%"><h3>address</h3></div>
+                <div class="panel-head" style="margin-left:3%"><h3>Dirección</h3></div>
                     <div class="panel-body">
                       <div class="form-group">
                         <div class="col-md-10">
                           <label class="col-md-4 control-label" for=
-                          "HOMENUMBER">Home Number:</label>
+                          "HOMENUMBER">Número de casa:</label>
 
                           <div class="col-md-8">
                              <input class="form-control input-sm" id="HOMENUMBER" name="HOMENUMBER" placeholder=
-                                "Home Number" type="text" value="">
+                                "Número de casa" type="text" value="">
                           </div>
                         </div>
                       </div>
@@ -273,11 +273,11 @@ if (isset($_POST['updateid'])){
                        <div class="form-group">
                         <div class="col-md-10">
                           <label class="col-md-4 control-label" for=
-                          "STREET">Street / Village :</label>
+                          "STREET">Calle / Avenida :</label>
 
                           <div class="col-md-8">
                              <input class="form-control input-sm" id="STREET" name="STREET" placeholder=
-                                "Street" type="text" value="">
+                                "Calle" type="text" value="">
                           </div>
                         </div>
                       </div>
@@ -287,22 +287,22 @@ if (isset($_POST['updateid'])){
 
 
                           <label class="col-md-4 control-label" for=
-                          "BARANGGY">Barangay:</label>
+                          "BARANGGY">Provincia:</label>
 
                           <div class="col-md-8">
                              <input class="form-control input-sm" id="BARANGGY" name="BARANGGY" placeholder=
-                                "Barangay" type="text" value="">
+                                "Provincia" type="text" value="">
                           </div>
                         </div>
                       </div>
                        <div class="form-group">
                         <div class="col-md-10">
                           <label class="col-md-4 control-label" for=
-                          "CITYADDRESS">City:</label>
+                          "CITYADDRESS">Ciudad:</label>
 
                           <div class="col-md-8">
                              <input class="form-control input-sm" id="CITYADDRESS" name="CITYADDRESS" placeholder=
-                                "City Address" type="text" value="">
+                                "Ciudad" type="text" value="">
                           </div>
                         </div>
                       </div>
@@ -352,8 +352,8 @@ if (isset($_POST['updateid'])){
                       "PASS"></label>
 
                       <div class="col-md-8">
-                      <p>Note</p>
-                        Password must be atleast 8 to 15 characters. Only letter, numeric digits, underscore and first character must be a letter.
+                      <p>Nota</p>
+                        La contraseña debe tener al menos 8 a 15 caracteres. Solo letras, dígitos numéricos, guiones bajos y el primer carácter deben ser letras.
                       </div> 
                     </div>
                   </div>
@@ -362,11 +362,11 @@ if (isset($_POST['updateid'])){
                   <div class="form-group">
                     <div class="col-md-10">
                       <label class="col-md-4 control-label" for=
-                      "CONTACTNUMBER">Contact Number:</label>
+                      "CONTACTNUMBER">Teléfono:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="CONTACTNUMBER" name="CONTACTNUMBER" placeholder=
-                            "Contact Number" type="text" value="">
+                            "Teléfono" type="text" value="">
                       </div>
                     </div>
                   </div>
@@ -374,11 +374,11 @@ if (isset($_POST['updateid'])){
                   <div class="form-group">
                     <div class="col-md-10">
                       <label class="col-md-4 control-label" for=
-                      "ZIPCODE">Zip Code:</label>
+                      "ZIPCODE">Código postal:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="ZIPCODE" name="ZIPCODE" placeholder=
-                            "Zip Code" type="number" value="">
+                            "código postal" type="number" value="">
                       </div>
                     </div>
                   </div>
@@ -386,7 +386,7 @@ if (isset($_POST['updateid'])){
                   <div class="form-group">
                     <div class="col-md-10">
                       <label class="col-md-4" align = "right"for=
-                      "image">Upload Image:</label>
+                      "image">Cargar imagen:</label>
 
                       <div class="col-md-8">
                       <input type="file" name="image" value="" id="image"/>
@@ -401,16 +401,16 @@ if (isset($_POST['updateid'])){
                       <div class="col-md-8">
                     <p>
                     <!-- <input type="checkbox" name="condition" value="checkbox" /> -->
-                      <small>Agree the <a class="toggle-modal"  onclick=" OpenPopupCenter('terms.php','Terms And Codition','600','600')"  ><b>TERMS AND CONDITION</b></a> of this Bakeshop</small>
+                      <small>De acuerdo a los <a class="toggle-modal"  onclick=" OpenPopupCenter('terms.php','Terms And Codition','600','600')"  ><b>Términos y Condiciones</b></a> de este comercio electrónico.</small>
                       
                       </div>
                     </div>
                   </div>
  
-                  <div class="modal-footer"><p align="left">&copy; Fix N Mix Ordering System</p>
+                  <div class="modal-footer"><p align="left">&copy; APPOLLO</p>
                     <button class="btn btn-default" data-dismiss="modal" type=
-                    "button">Close</button> 
-                    <button type="submit"  name="savecustomer"   class="submit btn btn_fixnmix" >Sign Up</button> 
+                    "button">Cerrar</button> 
+                    <button type="submit"  name="savecustomer"   class="submit btn btn_fixnmix" >Regístrate</button> 
                     <!-- <button class="btn btn_fixnmix"
                     name="btnsignup" type="submit" onclick="return personalInfo();" >Sign Up</button>  -->
                   </div> 

@@ -10,9 +10,9 @@
               <!-- Nav tabs -->
 
               <ul class="nav nav-pills">
-                  <li class="active"><a class="btn btn-default check_out" href="#home" data-toggle="tab">Login</a>
+                  <li class="active"><a class="btn btn-default check_out" href="#home" data-toggle="tab">Iniciar Sesión</a>
                   </li>
-                  <li><a class="btn btn-default check_out" href="#profile" data-toggle="tab">Sign Up</a>
+                  <li><a class="btn btn-default check_out" href="#profile" data-toggle="tab">Regístrate</a>
                   </li>
                   
               </ul>
@@ -23,7 +23,7 @@
                       <!-- <h4>Login Tab</h4>  -->
                        <div class="panel panel-pup">
                         <div class="panel-heading">
-                            Login Details
+                            Detalles de Registro
                         </div>
                         <div class="panel-body">
 
@@ -59,8 +59,8 @@
                                     "FIRSTNAME"> </label>
                                     
                                     <div class="col-md-8">
-                                    <button type="submit" id="modalLogin" name="modalLogin" class="btn btn-pup"><span class="glyphicon glyphicon-log-in "></span>   Login</button> 
-                                     <button class="btn btn-default" data-dismiss="modal" type="button">Close</button> 
+                                    <button type="submit" id="modalLogin" name="modalLogin" class="btn btn-pup"><span class="glyphicon glyphicon-log-in "></span>Ingresar</button> 
+                                     <button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button> 
                                     </div>
                                   </div>
                                 </div>
@@ -70,7 +70,7 @@
 
                        </div>
                         <div class="panel-footer">
-                             <p align="left">&copy; <a href="https://bit.ly/2LPn9Wu">Janobe Source Code</a></p>
+                             <p align="left">&copy; APPollo MoliService El Chotano E.I.R.L. </p>
                         </div>
                     </div> 
                   </div>
@@ -83,14 +83,14 @@
                            <form  class="form-horizontal span6" action="customer/controller.php?action=add" onsubmit="return personalInfo();" name="personal" method="POST" enctype="multipart/form-data">
                                 <div class="panel panel-pup">
                                     <div class="panel-heading">
-                                       Customer Details
+                                       Detalles del Cliente
                                     </div>
                                      <div class="panel-body">
                                       <input class="proid" type="hidden" name="proid" id="proid" value="">
                                       <div class="form-group">
                                         <div class="col-md-10">
                                           <label class="col-md-4 control-label" for=
-                                          "FNAME">First Name:</label>
+                                          "FNAME">Nombres Completo:</label>
                                           <!-- <input  id="CUSTOMERID" name="CUSTOMERID"  type="HIDDEN" value="<?php echo $res->AUTO; ?>">  -->
                                           <div class="col-md-8">
                                              <input class="form-control input-sm" id="FNAME" name="FNAME" placeholder=
@@ -102,7 +102,7 @@
                                       <div class="form-group">
                                         <div class="col-md-10">
                                           <label class="col-md-4 control-label" for=
-                                          "LNAME">Last Name:</label>
+                                          "LNAME">Apellidos:</label>
 
                                           <div class="col-md-8">
                                              <input class="form-control input-sm" id="LNAME" name="LNAME" placeholder=
@@ -114,13 +114,13 @@
                                        <div class="form-group">
                                         <div class="col-md-10">
                                           <label class="col-md-4 control-label" for=
-                                          "GENDER">Gender:</label>
+                                          "GENDER">Género:</label>
 
                                           <div class="col-md-8">
                                             <input  id="GENDER" name="GENDER" placeholder=
-                                                "Gender" type="radio" checked="true" value="Male"><b> Male </b>
+                                                "Gender" type="radio" checked="true" value="Male"><b> Masculino </b>
                                                 <input   id="GENDER" name="GENDER" placeholder=
-                                                "Gender" type="radio" value="Female"> <b> Female </b>
+                                                "Gender" type="radio" value="Female"> <b> Femenino </b>
                                           </div>
                                         </div>
                                       </div>
@@ -128,7 +128,7 @@
                                        <div class="form-group">
                                             <div class="col-md-10">
                                               <label class="col-md-4 control-label" for=
-                                              "CITYADD">Municipality/City:</label>
+                                              "CITYADD">Ciudad/Municipalidad:</label>
 
                                               <div class="col-md-8">
                                                  <input class="form-control input-sm" id="CITYADD" name="CITYADD" placeholder=
@@ -168,8 +168,8 @@
                                           "PASS"></label>
 
                                           <div class="col-md-8">
-                                          <p>Note</p>
-                                            Password must be atleast 8 to 15 characters. Only letter, numeric digits, underscore and first character must be a letter.
+                                          <p>Nota</p>
+                                            La contraseña debe tener al menos 8 a 15 caracteres. Solo letras, dígitos numéricos, guiones bajos y el primer carácter deben ser letras.
                                          </div> 
                                         </div>
                                       </div> 
@@ -177,7 +177,7 @@
                                       <div class="form-group">
                                         <div class="col-md-10">
                                           <label class="col-md-4 control-label" for=
-                                          "PHONE">Contact Number:</label>
+                                          "PHONE">Número de Contacto:</label>
 
                                           <div class="col-md-8">
                                              <input class="form-control input-sm" id="PHONE" name="PHONE" placeholder=
@@ -193,8 +193,8 @@
                                            <label class="col-md-4" align = "right"for=
                                           "image"></label>
                                           <div class="col-md-8">
-                                        <p>  I <input type="checkbox" id="conditionterms" name="conditionterms" value="checkbox" />
-                                           <small>Agree with the <a class="toggle-modal"  onclick=" OpenPopupCenter('terms.php','Terms And Codition','600','600')"  ><b>TERMS AND CONDITION</b></a> of Janobe Source Code.</small>
+                                        <p>  Yo <input type="checkbox" id="conditionterms" name="conditionterms" value="checkbox" />
+                                           <small>Aceptos los <a class="toggle-modal"  onclick=" OpenPopupCenter('terms.php','Terms And Codition','600','600')"  ><b>Términos y Condiciones</b></a> APPollo MoliService El Chotano E.I.R.L.</small>
                                            
                                           </div>
                                         </div>
@@ -207,7 +207,7 @@
                                           <div class="col-md-8">
                                             <input type="submit"  name="submit"  value="Sign Up"  class="submit btn btn-pup"  />
                                              <button class="btn btn-default" data-dismiss="modal" type=
-                                                "button">Close</button> 
+                                                "button">Cerrar</button> 
                                           </div>
                                         </div>
                                       </div> 
@@ -216,7 +216,7 @@
 
                                      </div>
                                     <div class="panel-footer">
-                                        <p align="left">&copy; <a href="https://bit.ly/2LPn9Wu">Janobe Source Code</a></p>
+                                        <p align="left">&copy;APPollo - MoliService El Chotano E.I.R.L.</p>
                                     </div> 
                             </div> 
                             <!-- end panel sign up -->

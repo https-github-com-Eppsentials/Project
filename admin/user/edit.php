@@ -15,7 +15,7 @@
  <form class="form-horizontal span6" action="controller.php?action=edit" method="POST">
 
           <fieldset>
-            <legend> Update User Account</legend>
+            <legend> ACTUALIZAR CUENTA DEL USUARIO</legend>
                    
                     <!-- <div class="form-group">
                     <div class="col-md-8">
@@ -33,12 +33,12 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "U_NAME">Name:</label>
+                      "U_NAME">Nombre de cuenta:</label>
 
                       <div class="col-md-8">
                         <input name="deptid" type="hidden" value="">
                          <input class="form-control input-sm" id="U_NAME" name="U_NAME" placeholder=
-                            "Account Name" type="text" value="<?php echo $singleuser->U_NAME; ?>">
+                            "nombre de cuenta" type="text" value="<?php echo $singleuser->U_NAME; ?>">
                       </div>
                     </div>
                   </div>
@@ -71,14 +71,14 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "U_ROLE">Role:</label>
+                      "U_ROLE">Rol:</label>
 
                       <div class="col-md-8">
                        <select class="form-control input-sm" name="U_ROLE" id="U_ROLE">
-                          <option value="Administrator"  <?php echo ($singleuser->U_ROLE=='Administrator') ? 'selected="true"': '' ; ?>>Administrator</option>
-                          <option value="Staff" <?php echo ($singleuser->U_ROLE=='Staff') ? 'selected="true"': '' ; ?>>Staff</option> 
+                          <option value="Administrator"  <?php echo ($singleuser->U_ROLE=='Administrator') ? 'selected="true"': '' ; ?>>Administrador</option>
+                          <option value="Staff" <?php echo ($singleuser->U_ROLE=='Staff') ? 'selected="true"': '' ; ?>>Personal</option> 
                           <!-- <option value="Customer">Customer</option> -->
-                          <option value="Encoder" <?php echo ($singleuser->U_ROLE=='Encoder') ? 'selected="true"': '' ; ?>>Encoder</option>
+                          <option value="Encoder" <?php echo ($singleuser->U_ROLE=='Encoder') ? 'selected="true"': '' ; ?>>Codificador</option>
                         </select> 
                       </div>
                     </div>
@@ -91,7 +91,7 @@
                       "idno"></label>
 
                       <div class="col-md-8">
-                         <button class="btn btn-primary " name="save" type="submit" ><span class="fa fa-save fw-fa"></span> Save</button>
+                         <button class="btn btn-primary " name="save" type="submit" ><span class="fa fa-save fw-fa"></span> GRABAR</button>
                           <!-- <a href="index.php" class="btn btn-info"><span class="fa fa-arrow-circle-left fw-fa"></span>&nbsp;<strong>List of Users</strong></a> -->
                       </div>
                     </div>

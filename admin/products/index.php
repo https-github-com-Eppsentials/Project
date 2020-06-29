@@ -9,9 +9,8 @@ if(!isset($_SESSION['USERID'])){
 $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
 
 	$header=$view;
-	$title="Products"; 
+	$title="Productos"; //Products
 	switch ($view) {
-
 	case 'list' :
 	 
 		$content    = 'list.php';		
@@ -31,7 +30,7 @@ $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
   
 
   	default :
-	$title="Products";
+	$title="Productos";
 		$content    = 'list.php';
 	}
 

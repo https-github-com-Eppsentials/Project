@@ -159,7 +159,7 @@ function product_exists($pid){
     for($i=0;$i<$max;$i++){
       if($pid==$_SESSION['gcCart'][$i]['productid']){
         $flag=1;
-        message("Item is already in the cart.","error");
+        message("El artículo ya está en el carrito","error");
         break;
       }
     }
@@ -190,7 +190,7 @@ function product_exists($pid){
       $_SESSION['gcCart'][0]['price']=$price;
 }
 	
-         message("1 Item added in the cart.","success");
+         message("1 Artículo se agregó al carrito","success");
 }
   function removetocart($pid){
 		$pid=intval($pid);
@@ -267,31 +267,31 @@ switch ($setheader) {
  
 
   case 'product' :
-       echo $title="Products"  . (isset($subheader) ?  '  |  ' .$subheader: '' );   
+       echo $title="Productos"  . (isset($subheader) ?  '  |  ' .$subheader: '' );   
    
   case 'cart' :
-       echo $title="Cart List";   
+       echo $title="Lista de Compra";   
     break;
   case 'profile' :
-      echo  $title="Profile";  
+      echo  $title="Perfil";  
     break;
   case 'orderdetails' : 
-    echo $title = "Cart List/Order Details";
+    echo $title = "Lista de Compra/Detalle Pedido";
  
      break;
 
   case 'billing' :   
-      echo $title = "Cart List/Order Details/Billing Details";
+      echo $title = "Lista de Compra/Detalle Pedido/Detalle Facturación";
     break;
 
   case 'contact' :
-      echo  $title="Contact Us";   
+      echo  $title="Contáctanos";   
     break;
   case 'single-item' :
-      echo  $ $title="Products"  . (isset($subheader) ?  '  |  ' .$subheader: '' ); 
+      echo  $ $title="Productos"  . (isset($subheader) ?  '  |  ' .$subheader: '' ); 
     break;
   default :
-   echo   $title="Home";  
+   echo   $title="Inicio";  
   
 }
 }

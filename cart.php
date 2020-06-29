@@ -56,11 +56,11 @@ check_message();
                                               
                                             if (isset($_SESSION['CUSID'])){  
 
-                                              echo ' <a href="'.web_root. 'customer/controller.php?action=addwish&proid='.$result->PROID.'" title="Add to wishlist">Add to wishlist</a>
+                                              echo ' <a href="'.web_root. 'customer/controller.php?action=addwish&proid='.$result->PROID.'" title="Agregar a Lista de Deseos">Agregar a Lista de Deseos</a>
              ';
                                            
                                              }else{
-                                               echo   '<a href="#" title="Add to wishlist" class="proid"  data-target="#smyModal" data-toggle="modal" data-id="'.  $result->PROID.'">Add to wishlist</a>
+                                               echo   '<a href="#" title="Agregar a Lista de Deseos" class="proid"  data-target="#smyModal" data-toggle="modal" data-id="'.  $result->PROID.'">Agregar a Lista de Deseos</a>
              ';
                                             } 
                                   

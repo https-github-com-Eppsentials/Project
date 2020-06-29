@@ -6,7 +6,7 @@
 
 
      // if($_SESSION['fixnmixConfiremd']>0){
-     //   $query = "update `tblpayment` SET `HVIEW` = true WHERE `CUSTOMERID`='".$_SESSION['CUSID']."' AND STATS in ('Confirmed','Cancelled')  AND HVIEW=0";
+     //   $query = "update `tblpayment` SET `HVIEW` = true WHERE `CUSTOMERID`='".$_SESSION['CUSID']."' AND STATS in ('Confirmado','Cancelado')  AND HVIEW=0";
      //    mysql_query($query);
      // }
     
@@ -18,8 +18,8 @@
     <div class="container">
          <div class="breadcrumbs">
         <ol class="breadcrumb">
-          <li><a href="#">Home</a></li>
-          <li class="active">Profile</li>
+          <li><a href="#">Inicio</a></li>
+          <li class="active">Perfil</li>
         </ol>
       </div>
         <div class="row">
@@ -34,11 +34,11 @@
             <ul class="list-group">
             <!-- <li class="list-group-item text-muted">Profile</li> -->
                 <li class="list-group-item text-right"><span class=
-                "pull-left"><strong>Real name</strong></span>
+                "pull-left"><strong>Nombres</strong></span>
                 <?php echo $res->FNAME .' '.$res->LNAME; ?></li>
                 <li class="list-group-item text-right"> 
                 <div class="panel-group" id="accordion">   
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"  >Change Password</a>
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"  >Cambiar password</a>
                   <div id="collapseTwo" class="panel-collapse collapse">
                     <div class="panel-body">
                         <form action="<?php echo web_root; ?>customer/controller.php?action=changepassword" method="POST"> 
@@ -57,14 +57,13 @@
             <div class="panel-body">
                 <ul class="nav nav-tabs" id="myTab">
                     <li class="active">
-                        <a data-toggle="tab" href="#home">List of Orders</a>
+                        <a data-toggle="tab" href="#home">Lista de Pedidos</a>
                     </li> 
                     <li>
-                        <a data-toggle="tab" href="#settings">Update
-                        Account</a>
+                        <a data-toggle="tab" href="#settings">Actualizar cuenta</a>
                     </li>
                     <li>
-                        <a data-toggle="tab" href="#wishlist">WishList</a>
+                        <a data-toggle="tab" href="#wishlist">Lista de deseos</a>
                     </li>
                 </ul>
                 <div class="tab-content">
@@ -83,11 +82,11 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Order#</th>
-                                            <th>Date Oredered</th>
-                                            <th>TotalPrice</th>
-                                            <th>PaymentMethod</th>
-                                            <th>Status</th>
+                                            <th>Pedido#</th>
+                                            <th>Fecha Pedido</th>
+                                            <th>Precio Total</th>
+                                            <th>Método de Pago</th>
+                                            <th>Estado</th>
                                             <th width="150px">Remarks</th>
                                             <th></th>
                                         </tr>
@@ -129,12 +128,12 @@
                                                 data-target="#myOrdered"
                                                 data-toggle="modal" href="#"
                                                 title=
-                                                "View list Of ordered products">
+                                                "Ver la lista de productos solicitados">
                                                 <i class=
                                                 "fa fa-info-circle fa-fw"
                                                 data-placement="left"
                                                 data-toggle="tooltip" title=
-                                                "View Order"></i> <span class=
+                                                "Ver Pedido"></i> <span class=
                                                 "tooltip tooltip.top">view</span></a>
                                             
                                             </td>
@@ -163,8 +162,7 @@
                 <div class="modal-header">
                     <button class="close" data-dismiss="modal" type=
                     "button">×</button>
-                    <h4 class="modal-title" id="myModalLabel">Choose
-                    Image.</h4>
+                    <h4 class="modal-title" id="myModalLabel">Escoger imagen</h4>
                 </div>
                 <form action="customer/controller.php?action=photos" enctype=
                 "multipart/form-data" method="post">
@@ -187,9 +185,8 @@
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-default" data-dismiss="modal"
-                        type="button">Close</button> <button class=
-                        "btn btn-pup" name="savephoto" type="submit">Upload
-                        Photo</button>
+                        type="button">Cerrar</button> <button class=
+                        "btn btn-pup" name="savephoto" type="submit">Subir foto</button>
                     </div>
                 </form>
             </div><!-- /.modal-content -->

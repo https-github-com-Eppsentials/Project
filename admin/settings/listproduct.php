@@ -4,7 +4,7 @@
 		 
 		<div class="row">
        	 <div class="col-lg-12">
-            <h1 class="page-header">List of Products   </h1>
+            <h1 class="page-header">LISTA DE PRODUCTOS</h1>
        		</div>
         	<!-- /.col-lg-12 -->
    		 </div>
@@ -16,12 +16,12 @@
 				  	<tr>  
 				  		<!-- <th>Model</th>  -->
 				  		<!-- <th align="left"><input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');"> Product</th>  -->
-				  		<th>Product</th> 
+				  		<th>Producto</th> 
 				  		<!-- <th>Description</th> -->
-				  		<th>Category</th>
-				  		<th>Price</th>
+				  		<th>Categoría</th>
+				  		<th>Precio</th>
 				  		<!-- <th>Quantity</th>   -->
-				  		<th width="130">Action</th> 
+				  		<th width="130">Acción</th> 
 				  		 
 				  	</tr>	
 				  </thead> 	
@@ -44,15 +44,15 @@
 				  		echo '<td> &#36 '.  number_format($result->PRODISPRICE,2).'</td>';
 				  		// echo '<td width="4%">'. $result->PROQTY.'</td>'; .
 				  		
-				  		if ($result->PROSTATS=='Available'){
-				  			$stats = 'Available';
+				  		if ($result->PROSTATS=='Disponible'){
+				  			$stats = 'Disponible';
 				  		}else{
-				  			$stats = 'NotAvailable';
+				  			$stats = 'Oculto';
 				  		}
 				  		echo
 				  		 '<td align="left">
 							<a href="'.web_root.'admin/settings/controller.php?action=editStatus&id='.$result->PROID.'&stats='.$stats.'" class="btn btn-primary btn-xs">'.$stats.'</a>
-							<a href="setDiscount.php?id='.$result->PROID.'" data-toggle="lightbox"  class="btn btn-primary btn-xs">Set Discount</a>
+							<a href="setDiscount.php?id='.$result->PROID.'" data-toggle="lightbox"  class="btn btn-primary btn-xs">Descuento</a>
 				  		 </td>';
 				  	} 
 				  	?>

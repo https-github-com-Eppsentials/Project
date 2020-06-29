@@ -7,12 +7,11 @@ require_once("../../include/initialize.php");
 
 $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
 $header=$view;
-$title="Settings";
+$title="Gestionar";//Settings
 switch ($view) {
 	case 'list' :
 		$content    = 'list.php';		
-		break;
-
+		break; 
 	case 'add' :
 		$content    = 'setDeliveryFee.php';		
 		break;

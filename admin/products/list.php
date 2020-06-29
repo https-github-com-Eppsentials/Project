@@ -19,7 +19,7 @@
 				  		<!-- <th>Model</th>  -->
 				  		<!-- <th align="left"><input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');"> Product</th>  -->
 				  		<th>Producto</th> 
-				  		<th>Descripcion</th>
+				  		<th>Descripción</th>
 				  		<!-- <th>Category</th> -->
 				  		<th>Precio</th>
 				  		<th>Descuento%</th>  
@@ -89,7 +89,7 @@
                                     <button class="close" data-dismiss="modal" type=
                                     "button">ï¿½</button>
 
-                                    <h4 class="modal-title" id="myModalLabel">Image.</h4>
+                                    <h4 class="modal-title" id="myModalLabel">Imagen</h4>
                                 </div>
 
                                 <form action="<?php echo web_root; ?>admin/products/controller.php?action=photos" enctype="multipart/form-data" method=
@@ -117,8 +117,8 @@
 
                                     <div class="modal-footer">
                                         <button class="btn btn-default" data-dismiss="modal" type=
-                                        "button">Close</button> <button class="btn btn-primary"
-                                        name="savephoto" type="submit">Upload Photo</button>
+                                        "button">Cerrar</button> <button class="btn btn-primary"
+                                        name="savephoto" type="submit">Cargar Foto</button>
                                     </div>
                                 </form>
                             </div><!-- /.modal-content -->

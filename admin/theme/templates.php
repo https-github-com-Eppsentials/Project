@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +42,7 @@
   ?> 
 
   <?php
-    $query = "SELECT * FROM tblsummary WHERE ORDEREDSTATS = 'Pending'";
+    $query = "SELECT * FROM tblsummary WHERE ORDEREDSTATS = 'Pendiente'";
     $mydb->setQuery($query);
     $cur = $mydb->executeQuery();
     $rowscount = $mydb->num_rows($cur);
@@ -68,24 +68,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                 <a class="navbar-brand"  href="<?php echo web_root; ?>admin/index.php" >Janobe E-Commerce</a>
+                 <a class="navbar-brand"  href="<?php echo web_root; ?>admin/index.php" >Panel de Control - APPOLLO</a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right"> 
                  <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-plus fa-fw"></i> New  <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-plus fa-fw"></i> Nuevo <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="<?php echo web_root; ?>admin/products/index.php?view=add"><i class="fa fa-barcode fa-fw"></i> Product</a>
+                        <li><a href="<?php echo web_root; ?>admin/products/index.php?view=add"><i class="fa fa-barcode fa-fw"></i> Producto</a>
                         </li>
-                        <li><a href="<?php echo web_root; ?>admin/category/index.php?view=add"><i class="fa fa-list-alt  fa-fw"></i> Category</a>
+                        <li><a href="<?php echo web_root; ?>admin/category/index.php?view=add"><i class="fa fa-list-alt  fa-fw"></i> Categoría</a>
                         </li>
                             <?php if ($_SESSION['U_ROLE']=='Administrator') {
                             # code...
                         ?>
-                         <li><a href="<?php echo web_root; ?>admin/user/index.php?view=add"><i class="fa fa-user  fa-fw"></i> User</a>
+                         <li><a href="<?php echo web_root; ?>admin/user/index.php?view=add"><i class="fa fa-user  fa-fw"></i> Usuario</a>
                             </li>
                         <?php }?>
                         
@@ -100,7 +100,7 @@ $singleuser = $user->single_user($_SESSION['USERID']);
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        Howdy, <?php echo $_SESSION['U_NAME']; ?> <img title="profile image" width="23px" height="17px" src="<?php echo web_root.'admin/user/'.$singleuser ->USERIMAGE ?>">  
+                        <?php echo $_SESSION['U_NAME']; ?> <img title="profile image" width="23px" height="17px" src="<?php echo web_root.'admin/user/'.$singleuser ->USERIMAGE ?>">  
                             
                     </a>
                     <ul class="dropdown-menu dropdown-acnt">
@@ -113,12 +113,12 @@ $singleuser = $user->single_user($_SESSION['USERID']);
                     
 
                       <div class="divtxt">
-                        <li><a href="<?php echo web_root; ?>admin/user/index.php?view=edit&id=<?php echo $_SESSION['USERID']; ?>"> <?php echo $_SESSION['U_NAME']; ?> </a>
-                      <li><a title="Edit" href="<?php echo web_root; ?>admin/user/index.php?view=edit&id=<?php echo $_SESSION['USERID']; ?>"  >Edit My Profile</a>
+                        <!-- <li><a href="<?php echo web_root; ?>admin/user/index.php?view=edit&id=<?php echo $_SESSION['USERID']; ?>"> <?php echo $_SESSION['U_NAME']; ?> </a> -->
+                      <li><a title="Edit" href="<?php echo web_root; ?>admin/user/index.php?view=edit&id=<?php echo $_SESSION['USERID']; ?>"  >Editar Perfil</a>
                                     
                         </li>
                           </li>
-                           <li><a href="<?php echo web_root; ?>admin/logout.php"><i class="fa fa-sign-out fa-fw"></i> Log Out</a>
+                           <li><a href="<?php echo web_root; ?>admin/logout.php"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
                         </li> 
                   </div>
                      
@@ -140,22 +140,22 @@ $singleuser = $user->single_user($_SESSION['USERID']);
                         </li> -->
                       
                         <li>
-                             <a href="<?php echo web_root; ?>admin/products/index.php"><i class="fa fa-barcode fa-fw"></i>Products </a>
+                             <a href="<?php echo web_root; ?>admin/products/index.php"><i class="fa fa-barcode fa-fw"></i>Productos </a>
            
                         </li>
                         <li>
-                             <a href="<?php echo web_root; ?>admin/orders/index.php" ><i class="fa fa-reorder fa-fw"></i>  Orders <?php echo $order; ?></a>
+                             <a href="<?php echo web_root; ?>admin/orders/index.php" ><i class="fa fa-reorder fa-fw"></i>  Pedidos <?php echo $order; ?></a>
                   </li>
                            
                          <li>
-                             <a href="<?php echo web_root; ?>admin/category/index.php" ><i class="fa fa-list-alt fa-fw"></i>  Categories </a>
+                             <a href="<?php echo web_root; ?>admin/category/index.php" ><i class="fa fa-list-alt fa-fw"></i>  Categorías </a>
             
                         </li>
                         <?php if ($_SESSION['U_ROLE']=='Administrator') {
                             # code...
                         ?>
                          <li>
-                             <a href="<?php echo web_root; ?>admin/settings/index.php" ><i class="fa fa-list-alt fa-fw"></i>  Setting </a>
+                             <a href="<?php echo web_root; ?>admin/settings/index.php" ><i class="fa fa-list-alt fa-fw"></i>  Catálogo </a>
             
                         </li>
                        <!--   <li>
@@ -163,11 +163,11 @@ $singleuser = $user->single_user($_SESSION['USERID']);
             
                         </li> -->
                           <li>
-                            <a href="<?php echo web_root; ?>admin/user/index.php" ><i class="fa fa-user fa-fw"></i> Users </a>
+                            <a href="<?php echo web_root; ?>admin/user/index.php" ><i class="fa fa-user fa-fw"></i> Usuarios </a>
                           
                         </li>
                          <li>
-                            <a href="<?php echo web_root; ?>admin/report/index.php" ><i class="fa  fa-file-text fa-fw"></i> Report </a>
+                            <a href="<?php echo web_root; ?>admin/report/index.php" ><i class="fa  fa-file-text fa-fw"></i> Reportes </a>
                           
                         </li>
                  <?php }  ?>
@@ -222,8 +222,8 @@ $singleuser = $user->single_user($_SESSION['USERID']);
 
                                     <div class="modal-footer">
                                         <button class="btn btn-default" data-dismiss="modal" type=
-                                        "button">Close</button> <button class="btn btn-primary"
-                                        name="savephoto" type="submit">Upload Photo</button>
+                                        "button">Cerrar</button> <button class="btn btn-primary"
+                                        name="savephoto" type="submit">Subir Foto</button>
                                     </div>
                                 </form>
                             </div><!-- /.modal-content -->
@@ -260,9 +260,6 @@ $singleuser = $user->single_user($_SESSION['USERID']);
 
     </div>
     <!-- /#wrapper -->
- 
- 
-
 
 <!-- jQuery -->
 <script src="<?php echo web_root; ?>admin/jquery/jquery.min.js"></script>
@@ -318,9 +315,6 @@ $singleuser = $user->single_user($_SESSION['USERID']);
     } ).draw();
 } );
  
-
-
-     
  $(document).ready(function() {
     $('#dash-table').DataTable({
                 responsive: true ,
@@ -329,8 +323,6 @@ $singleuser = $user->single_user($_SESSION['USERID']);
  
     });
 
-
- 
 $('.date_pickerfrom').datetimepicker({
   format: 'mm/dd/yyyy',
    startDate : '01/01/2000', 
@@ -399,5 +391,5 @@ $('#date_picker').datetimepicker({
   
   
 </body> 
-      <footer><p  style="text-align: center;font-weight: bold;">Copyright &copy; Bachelor of Science and Entrepreneurs </p></footer>
+      <footer><p  style="text-align: center;font-weight: bold;">&copy; Desarrollado por: E.Y.Y.A. CorpSoftware S.A.C. </p></footer>
 </html>

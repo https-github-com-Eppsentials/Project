@@ -13,13 +13,13 @@ require_once ("../include/initialize.php");
 
 // if ($_POST['actions']=='confirm') {
 // 							# code...
-// 	$status	= 'Confirmed';	
-// 	// $remarks ='Your order has been confirmed. The ordered products will be yours anytime.';
+// 	$status	= 'Confirmado';	
+// 	// $remarks ='Your order has been confirmado. The ordered products will be yours anytime.';
 	 
 // }elseif ($_POST['actions']=='cancel'){
 // 	// $order = New Order();
-// 	$status	= 'Cancelled';
-// 	// $remarks ='Your order has been cancelled due to lack of communication and incomplete information.';
+// 	$status	= 'Cancelado';
+// 	// $remarks ='Your order has been cancelado due to lack of communication and incomplete information.';
 // }
 
 // $summary = New Summary();
@@ -81,18 +81,18 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
 		$mydb->setQuery($query);
 		$cur = $mydb->loadSingleResult();
 
-		if($cur->ORDEREDSTATS=='Confirmed'){
+		if($cur->ORDEREDSTATS=='Confirmado'){
 
 		
 		if ($cur->PAYMENTMETHOD=="Cash on Pickup") {
 			 
 		
 ?>
- 	 <h4>Your order has been confirmed and ready for Pick Up</h4><br/>
-		<h5>DEAR Ma'am/Sir ,</h5>
-		<h5>As you have ordered cash on pick up, please have the exact amount of cash to pay to our staff and bring this billing details.</h5>
+ 	 <h4>Su pedido ha sido confirmado y listo para ser recogido</h4><br/>
+		<h5>Estimado(a),</h5>
+		<h5>Como ha pedido efectivo al momento de la recolección, tenga la cantidad exacta de efectivo para pagar a nuestro personal y presente estos detalles de facturación.</h5>
 		 <hr/>
-		 <h4><strong>Pick up Information</strong></h4>
+		 <h4><strong>Recoger Información</strong></h4>
 		 <div class="row">
 		 	<!-- <div class="col-md-6">
 		 		<p> ORDER NUMBER : <?php echo $_SESSION['ordernumber']; ?></p>
@@ -105,8 +105,8 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
 		 		foreach ( $res as $row) echo $row->countitem; ?></p> 
 		 	</div> -->
 		 	<div class="col-md-6">
-		 	<p>Name : <?php echo $cur->FNAME . ' '.  $cur->LNAME ;?></p>
-		 	<p>Address : <?php echo $cur->CUSHOMENUM . ' ' . $cur->STREETADD . ' ' .$cur->BRGYADD . ' ' . $cur->CITYADD . ' ' .$cur->PROVINCE . ' ' .$cur->COUNTRY; ?></p>
+		 	<p>Nombre : <?php echo $cur->FNAME . ' '.  $cur->LNAME ;?></p>
+		 	<p>Dirección : <?php echo $cur->CUSHOMENUM . ' ' . $cur->STREETADD . ' ' .$cur->BRGYADD . ' ' . $cur->CITYADD . ' ' .$cur->PROVINCE . ' ' .$cur->COUNTRY; ?></p>
 		 		<!-- <p>Contact Number : <?php echo $cur->CONTACTNUMBER;?></p> -->
 		 	</div>
 		 </div>
@@ -114,51 +114,51 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
 }elseif ($cur->PAYMENTMETHOD=="Cash on Delivery"){
 		 
 ?>
- 	 <h4>Your order has been confirmed and delivered</h4><br/>
- 		<h5>DEAR Ma'am/Sir ,</h5>
-		<h5>Your order is on its way! As you have ordered via Cash on Delivery, please have the exact amount of cash for our deliverer.	</h5>
+ 	 <h4>Su pedido confirmado y entregado</h4><br/>
+ 		<h5>Estimado,</h5>
+		<h5>¡Su pedido está en camino! Como ha ordenado a través de Pago contra reembolso, tenga la cantidad exacta de efectivo para nuestro proveedor.	</h5>
 		 <hr/>
-		 <h4><strong>Delivery Information</strong></h4>
+		 <h4><strong>Información de Entrega</strong></h4>
 		 <div class="row">
 		 	<div class="col-md-6">
-		 		<p> ORDER NUMBER : <?php echo $_SESSION['ordernumber']; ?></p>
+		 		<p> Número de Pedido : <?php echo $_SESSION['ordernumber']; ?></p>
 
 		 			<?php 
 		 			$query="SELECT sum(ORDEREDQTY) as 'countitem' FROM `tblorder` WHERE `ORDEREDNUM`='".$_SESSION['ordernumber']."'";
 		 			$mydb->setQuery($query);
 					$res = $mydb->loadResultList();
 					?>
-		 		<p>Items to be delivered : <?php
+		 		<p>Artículos a entregar: <?php
 		 		foreach ( $res as $row) echo $row->countitem; ?></p> 
 
 		 	</div>
 		 	<div class="col-md-6">
-		 	<p>Name : <?php echo $cur->FNAME . ' '.  $cur->LNAME ;?></p>
+		 	<p>Nombre : <?php echo $cur->FNAME . ' '.  $cur->LNAME ;?></p>
 		 	<!-- <p>Address : <?php echo $cur->ADDRESS;?></p> -->
 		 		<!-- <p>Contact Number : <?php echo $cur->CONTACTNUMBER;?></p> -->
 		 	</div>
 		 </div>
 <?php 
 }
-}elseif($cur->ORDEREDSTATS=='Cancelled'){
+}elseif($cur->ORDEREDSTATS=='Cancelado'){
 
-	 echo "Your order has been cancelled due to lack of communication and incomplete information.";
+	 echo "Su pedido ha sido cancelado debido a la falta de comunicación e información incompleta.";
 
 }else{
-	echo "<h5>Your order is on process. Please check your profile for notification of confirmation.</h5>";
+	echo "<h5>Tu pedido está en proceso. Verifique su perfil para recibir notificaciones de confirmación.</h5>";
 } 
 ?>
 <hr/>
- <h4><strong>Order Information</strong></h4>
+ <h4><strong>Información del Pedido</strong></h4>
 		<table id="table" class="table">
 			<thead>
 				<tr>
 					<!-- <th>PRODUCT</th>? -->
-					<th>PRODUCT</th>
+					<th>Producto</th>
 					<!-- <th>DATE ORDER</th>  -->
-					<th>PRICE</th>
-					<th>QUANTITY</th>
-					<th>TOTAL PRICE</th>
+					<th>Precio</th>
+					<th>Cantidad</th>
+					<th>Precio Total</th>
 					<th></th> 
 				</tr>
 				</thead>
@@ -221,26 +221,26 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
        </table> <hr/>
  		<div class="row">
 		  	<div class="col-md-6 pull-left">
-		  	 <div>Ordered Date : <?php echo date_format(date_create($cur->ORDEREDDATE),"M/d/Y h:i:s"); ?></div> 
-		  		<div>Payment Method : <?php echo $cur->PAYMENTMETHOD; ?></div>
+		  	 <div>Fecha de Orden : <?php echo date_format(date_create($cur->ORDEREDDATE),"M/d/Y h:i:s"); ?></div> 
+		  		<div>Método de Pago : <?php echo $cur->PAYMENTMETHOD; ?></div>
 
 		  	</div>
 		  	<div class="col-md-6 pull-right">
-		  		<p align="right">Total Price : &#36 <?php echo number_format($subtot,2);?></p>
-		  		<p align="right">Delivery Fee : &#36 <?php echo number_format($price,2); ?></p>
-		  		<p align="right">Overall Price : &#36 <?php echo number_format($cur->PAYMENT,2); ?></p>
+		  		<p align="right">Precio Total : &#36 <?php echo number_format($subtot,2);?></p>
+		  		<p align="right">Gasto de envío : &#36 <?php echo number_format($price,2); ?></p>
+		  		<p align="right">Importe Total : &#36 <?php echo number_format($cur->PAYMENT,2); ?></p>
 		  	</div>
 		  </div>
 		 
 		  <?php
-		  if($cur->ORDEREDSTATS=="Confirmed"){
+		  if($cur->ORDEREDSTATS=="Confirmado"){
 		  ?>
 		   <hr/> 
 		  <div class="row">
-		 		 <p>Please print this as a proof of purchased</p><br/>
-		  	  <p>We hope you enjoy your purchased products. Have a nice day!</p>
-		  	  <p>Sincerely.</p>
-		  	  <h4><a href="https://bit.ly/2LPn9Wu">Janobe Source Code</a></h4>
+		 		 <p>Imprima esto como comprobante de compra</p><br/>
+		  	  <p>Esperamos que disfrute de sus productos comprados. ¡Que tengas un buen día!</p>
+		  	  <p>Sinceramente.</p>
+		  	  <h4>MoliService El Chotano E.I.R.L.</h4>
 		  </div>
 		  <?php }?>
   </div> 
@@ -249,13 +249,13 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
 
 		<div class="modal-footer">
 		 <div id="divButtons" name="divButtons">
-		<?php if($cur->ORDEREDSTATS!='Pending' || $cur->ORDEREDSTATS!='Cancelled' ){ ?> 
+		<?php if($cur->ORDEREDSTATS!='Pendiente' || $cur->ORDEREDSTATS!='Cancelado' ){ ?> 
      
-                <button  onclick="tablePrint();" class="btn btn_fixnmix pull-right "><span class="glyphicon glyphicon-print" ></span> Print</button>     
+                <button  onclick="tablePrint();" class="btn btn_fixnmix pull-right "><span class="glyphicon glyphicon-print" ></span> Imprimir</button>     
              
         <?php } ?>
 			<button class="btn btn-pup" id="btnclose" data-dismiss="modal" type=
-			"button">Close</button> 
+			"button">Cerrar</button> 
 		 </div> 
 		<!-- <button class="btn btn-primary"
 			name="savephoto" type="submit">Upload Photo</button> -->

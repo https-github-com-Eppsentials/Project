@@ -13,25 +13,25 @@
         
         <div class="col-sm-9 padding-right">
           <div class="features_items"><!--features_items-->
-            <h2 class="title text-center">Products</h2>
+            <h2 class="title text-center">Productos</h2>
               <?php
              if(isset($_POST['search'])) { 
                 $query = "SELECT * FROM `tblpromopro` pr , `tblproduct` p , `tblcategory` c
                           WHERE pr.`PROID`=p.`PROID` AND  p.`CATEGID` = c.`CATEGID`  AND PROQTY>0 
-                AND ( `CATEGORIES` LIKE '%{$_POST['search']}%' OR `PRODESC` LIKE '%{$_POST['search']}%' or `PROQTY` LIKE '%{$_POST['search']}%' or `PROPRICE` LIKE '%{$_POST['search']}%')";
+                AND ( `CATEGORIES` LIKE '%{$_POST['search']}%' OR `PRODESC` LIKE '%{$_POST['search']}%' or `PROQTY` LIKE '%{$_POST['search']}%' or `PROPRICE` LIKE '%{$_POST['search']}%') and prostats = 'Disponible'";
               }elseif(isset($_GET['category'])){
                 $query = "SELECT * FROM `tblpromopro` pr , `tblproduct` p , `tblcategory` c
-                          WHERE pr.`PROID`=p.`PROID` AND  p.`CATEGID` = c.`CATEGID`  AND PROQTY>0 AND CATEGORIES='{$_GET['category']}'";
+                          WHERE pr.`PROID`=p.`PROID` AND  p.`CATEGID` = c.`CATEGID`  AND PROQTY>0 AND CATEGORIES='{$_GET['category']}' and prostats = 'Disponible'";
               }else{
                 $query = "SELECT * FROM `tblpromopro` pr , `tblproduct` p , `tblcategory` c
-                          WHERE pr.`PROID`=p.`PROID` AND  p.`CATEGID` = c.`CATEGID`  AND PROQTY>0 ";
+                          WHERE pr.`PROID`=p.`PROID` AND  p.`CATEGID` = c.`CATEGID`  AND PROQTY>0 and prostats = 'Disponible' ";
               }
 
            
             $mydb->setQuery($query);
             $res = $mydb->executeQuery();
             $maxrow = $mydb->num_rows($res);
-
+    
             if ($maxrow > 0) { 
             $cur = $mydb->loadResultList();
            
@@ -50,13 +50,13 @@
                       <img src="<?php  echo web_root.'admin/products/'. $result->IMAGES; ?>" alt="" />
                       <h2>&#36 <?php  echo $result->PRODISPRICE; ?></h2>
                       <p><?php  echo    $result->PRODESC; ?></p>
-                      <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                      <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</button>
                     </div>
                     <div class="product-overlay">
                       <div class="overlay-content">
                         <h2>&#36 <?php  echo $result->PRODISPRICE; ?></h2>
                         <p><?php  echo    $result->PRODESC; ?></p>
-                        <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                        <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</button>
                       </div>
                     </div>
                 </div>
@@ -66,11 +66,11 @@
                               <?php     
                             if (isset($_SESSION['CUSID'])){  
 
-                              echo ' <a href="'.web_root. 'customer/controller.php?action=addwish&proid='.$result->PROID.'" title="Add to wishlist"><i class="fa fa-plus-square"></i>Add to wishlist</a></a>
+                              echo ' <a href="'.web_root. 'customer/controller.php?action=addwish&proid='.$result->PROID.'" title="Agregar a Lista de Deseos"><i class="fa fa-plus-square"></i>Agregar a Lista de Deseos</a></a>
                             ';
 
                              }else{
-                               echo   '<a href="#" title="Add to wishlist" class="proid"  data-target="#smyModal" data-toggle="modal" data-id="'.  $result->PROID.'"><i class="fa fa-plus-square"></i>Add to wishlist</a></a>
+                               echo   '<a href="#" title="Agregar a Lista de Deseos" class="proid"  data-target="#smyModal" data-toggle="modal" data-id="'.  $result->PROID.'"><i class="fa fa-plus-square"></i>Agregar a Lista de Deseos</a></a>
                             ';
                             }  
                             ?>
@@ -86,7 +86,7 @@
 
             }else{ 
 
-              echo '<h1>No Products Available</h1>';
+              echo '<h1>NO HAY PRODUCTOS DISPONIBLES EN CATÁLOGO</h1>';
 
             }?> 
           </div><!--features_items-->

@@ -11,7 +11,7 @@ require_once("../include/initialize.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login | Janobe </title>
+	<title>Iniciar Sesión | MoliService El Chotano </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -40,11 +40,11 @@ require_once("../include/initialize.php");
 			<div class="wrap-login100">
 				<form method="post" action=""  class="login100-form validate-form" >
 					<div class="login100-form-avatar">
-						<img src="images/youtube pic copy.jpg" alt="AVATAR">
+						<img src="images/avicola.png" alt="AVATAR">
 					</div>
 
 					<span class="login100-form-title p-t-20 p-b-45">
-						Janobe Source Code
+						APPollo - MoliService El Chotano E.I.R.L.
 					</span>
 
 				 	<?php echo check_message(); ?>
@@ -66,18 +66,14 @@ require_once("../include/initialize.php");
 
 					<div class="container-login100-form-btn p-t-10">
 						<button  type="submit" name="btnLogin"  class="login100-form-btn">
-							Login
+							Loguearse
 						</button>
 					</div>
  
 				</form>
 			</div>
 		</div>
-	</div>
-	
-	
-
-	
+	</div> 
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -100,7 +96,7 @@ if(isset($_POST['btnLogin'])){
   
    if ($email == '' OR $upass == '') {
 
-      message("Invalid Username and Password!", "error");
+      message("Nombre de usuario y password no válido", "error");
       redirect("login.php");
          
     } else {  
@@ -109,14 +105,14 @@ if(isset($_POST['btnLogin'])){
     //make use of the static function, and we passed to parameters
     $res = $user::userAuthentication($email, $h_upass);
     if ($res==true) { 
-       message("You logon as ".$_SESSION['U_ROLE'].".","success");
+       message("Te has logueado como ".$_SESSION['U_ROLE'].".","success");
       if ($_SESSION['U_ROLE']=='Administrator'){
          redirect(web_root."admin/index.php");
       }else{
            redirect(web_root."admin/login.php");
       }
     }else{
-      message("Account does not exist! Please contact Administrator.", "error");
+      message("La cuenta no existe! Por favor contacta al administrador.", "error");
        redirect(web_root."admin/login.php"); 
     }
  }

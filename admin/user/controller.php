@@ -46,7 +46,7 @@ switch ($action) {
 						// $autonum = New Autonumber(); 
 						// $autonum->auto_update(2);
 
-			message("New [". $_POST['U_NAME'] ."] created successfully!", "success");
+			message("Nuevo [". $_POST['U_NAME'] ."] creado satisfactoriamente", "success");
 			redirect("index.php");
 			
 		}
@@ -64,7 +64,7 @@ switch ($action) {
 			$user->U_ROLE			= $_POST['U_ROLE'];
 			$user->update($_POST['USERID']);
 
-			  message("[". $_POST['U_NAME'] ."] has been updated!", "success");
+			  message("[". $_POST['U_NAME'] ."] ha sido actualizado", "success");
 			redirect("index.php");
 		}
 	}
@@ -91,7 +91,7 @@ switch ($action) {
 				$user = New User();
 	 		 	$user->delete($id);
 			 
-			message("User already Deleted!","info");
+			message("El usuario ya se eliminó","info");
 			redirect('index.php');
 		// }
 		// }
@@ -109,7 +109,7 @@ switch ($action) {
 
 
 		if ( $errofile > 0) {
-				message("No Image Selected!", "error");
+				message("Imagen no seleccionada", "error");
 				redirect("index.php?view=view&id=". $_GET['id']);
 		}else{
 	 
@@ -119,7 +119,7 @@ switch ($action) {
 				@$image_size= getimagesize($_FILES['photo']['tmp_name']);
 
 			if ($image_size==FALSE ) {
-				message("Uploaded file is not an image!", "error");
+				message("El archivo cargado no es una imagen", "error");
 				redirect("index.php?view=view&id=". $_GET['id']);
 			}else{
 					//uploading the file

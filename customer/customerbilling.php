@@ -20,24 +20,24 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
         <img src="<?php echo web_root; ?>images/bg2.jpg"  height="90px" style="-webkit-border-radius:5px; -moz-border-radius:5px;" alt="Image">
             </td>
         <td width="87%" align="center">
-        <h3 >Bachelor of Science and Entrepreneurs</h3> 
+        <h3 >Garantía de venta - Cómprale al Perú</h3> 
         </td>
       </tr>
     </table>
     
      
   <!--  <div class="modal-body">  -->
-  <h5>Your order is on process. Please check your profile for notification of confirmation.</h5>
+  <h5>Tu pedido está en proceso. Verifique su perfil para recibir notificaciones de confirmación.</h5>
  
 <hr/> 
- <h4><strong>Order Information</strong></h4>
+ <h4><strong>Información del Pedido</strong></h4>
     <table id="table" class="table">
       <thead>
         <tr>
-          <th>PRODUCT</th>
-          <th>PRICE</th>
-          <th>QUANTITY</th>
-          <th>TOTAL PRICE</th>
+          <th>Pproducto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Total Precio</th>
           <th></th> 
         </tr>
         </thead>
@@ -90,14 +90,14 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
        </table> <hr/>
     <div class="row">
         <div class="col-md-6 pull-left">
-         <div>Ordered Date : <?php echo date_format(date_create($cur->ORDEREDDATE),"M/d/Y h:i:s"); ?></div> 
-          <div>Payment Method : <?php echo $cur->PAYMENTMETHOD; ?></div>
+         <div>Fecha Orden : <?php echo date_format(date_create($cur->ORDEREDDATE),"M/d/Y h:i:s"); ?></div> 
+          <div>Método de Pago : <?php echo $cur->PAYMENTMETHOD; ?></div>
 
         </div>
         <div class="col-md-6 pull-right">
-          <p align="right">Total Price : &#36 <?php echo number_format($tot,2);?></p>
-          <p align="right">Delivery Fee : &#36 <?php echo number_format($price,2); ?></p>
-          <p align="right">Overall Price : &#36 <?php echo number_format($cur->PAYMENT,2); ?></p>
+          <p align="right">Total Precio : &#36 <?php echo number_format($tot,2);?></p>
+          <p align="right">Gasto envío : &#36 <?php echo number_format($price,2); ?></p>
+          <p align="right">Importe Total : &#36 <?php echo number_format($cur->PAYMENT,2); ?></p>
         </div>
       </div>
      

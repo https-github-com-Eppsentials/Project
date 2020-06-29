@@ -6,7 +6,7 @@
 
 
      // if($_SESSION['fixnmixConfiremd']>0){
-     //   $query = "update `tblpayment` SET `HVIEW` = true WHERE `CUSTOMERID`='".$_SESSION['CUSID']."' AND STATS in ('Confirmed','Cancelled')  AND HVIEW=0";
+     //   $query = "update `tblpayment` SET `HVIEW` = true WHERE `CUSTOMERID`='".$_SESSION['CUSID']."' AND STATS in ('Confirmado','Cancelado')  AND HVIEW=0";
      //    mysql_query($query);
      // }
     
@@ -68,7 +68,7 @@
                           $cur = $mydb->loadResultList();
 
                         foreach ($cur as $result) {
-                          if($result->ORDEREDSTATS=='Pending'){
+                          if($result->ORDEREDSTATS=='Pendiente'){
                           ?>
                           <tr>  
 
@@ -82,7 +82,7 @@
 
 
                         <?php
-                       }elseif($result->ORDEREDSTATS=='Confirmed'){
+                       }elseif($result->ORDEREDSTATS=='Confirmado'){
                         ?>
                          <tr>   
                               <td align=""><h1><span  class="label label-danger">0</span></h1></td>
@@ -92,7 +92,7 @@
                               <td><label><h1><i class="fa fa-truck"></i></i></h1></label></td>
                           </tr>
                      <?php 
-                     }elseif($result->ORDEREDSTATS=='Delivered'){
+                     }elseif($result->ORDEREDSTATS=='Entregado'){
                         ?>
                          <tr>   
                               <td align=""><h1><span  class="label label-danger">0</span></h1></td>

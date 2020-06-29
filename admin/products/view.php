@@ -16,13 +16,13 @@
     <div class="row">
         <div class="col-md-4">
         <a data-target="#myModal" data-toggle="modal" href="" title=
-            "Click here to Change Image.">
+            "Click aquí para cargar imagen.">
             <img alt="" style="width:600px; height:400px;>" title="" class="img-circle img-thumbnail isTooltip" src="<?php echo $singleproduct->IMAGES; ?>" data-original-title="Usuario"> 
           
           </a>  
         </div>
         <div class="col-md-6">
-            <h1><strong>Product Details</strong></h1><br>
+            <h1><strong>Detalle Producto</strong></h1><br>
             <div class="table-responsive">
             <table class="table table-condensed table-responsive table-user-information">
                 <tbody>
@@ -30,7 +30,7 @@
                     <tr>    
                         <td>
                             <strong>
-                                   Product                                                
+                                   Producto                                                
                             </strong>
                         </td>
                         <td class="text-primary">
@@ -41,7 +41,7 @@
                         <td>
                             <strong>
                                 <!-- <span class="glyphicon glyphicon-cloud text-primary"></span>   -->
-                                Category                                                
+                                Categoría                                                
                             </strong>
                         </td>
                         <td class="text-primary">
@@ -53,7 +53,7 @@
                         <td>
                             <strong>
                                 <!-- <span class="glyphicon glyphicon-bookmark text-primary"></span>  -->
-                                Price                                                
+                                Precio                                                
                             </strong>
                         </td>
                         <td class="text-primary">
@@ -65,8 +65,8 @@
                     <tr>        
                         <td>
                             <strong>
-                                <!-- <span class="glyphicon glyphicon-eye-open text-primary"></span>  -->
-                                Available Quantity                                                
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                Cantidad Disponible                                               
                             </strong>
                         </td>
                         <td class="text-primary">
@@ -92,7 +92,7 @@
                   <button class="close" data-dismiss="modal" type=
                   "button">×</button>
 
-                  <h4 class="modal-title" id="myModalLabel">Choose Image.</h4>
+                  <h4 class="modal-title" id="myModalLabel">Escoger imagen</h4>
                 </div>
 
                 <form action="controller.php?action=photos&id=<?php echo $PROID; ?>" enctype="multipart/form-data" method=
@@ -118,8 +118,8 @@
 
                   <div class="modal-footer">
                     <button class="btn btn-default" data-dismiss="modal" type=
-                    "button">Close</button> <button class="btn btn-primary"
-                    name="savephoto" type="submit">Upload Photo</button>
+                    "button">Cerrar</button> <button class="btn btn-primary"
+                    name="savephoto" type="submit">Subir Foto</button>
                   </div>
                 </form>
               </div><!-- /.modal-content -->

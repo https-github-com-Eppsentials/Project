@@ -5,7 +5,7 @@ if(!isset($_SESSION['USERID'])){
 }
 
 $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
- $title="Users"; 
+ $title="Usuarios"; //users
  $header=$view; 
 switch ($view) {
 	case 'list' :

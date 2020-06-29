@@ -14,7 +14,7 @@
         
         <div class="row">
          <div class="col-lg-12">
-            <h1 class="page-header">Update Product</h1>
+            <h1 class="page-header">ACTUALIZAR PRODUCTO</h1>
           </div>
           <!-- /.col-lg-12 -->
        </div>
@@ -25,11 +25,11 @@
         <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "OWNERNAME">Owner:</label>
+                      "OWNERNAME">PROVEEDOR:</label>
 
                       <div class="col-md-8">
                             <input class="form-control input-sm" id="OWNERNAME" name="OWNERNAME" placeholder=
-                            "Owner Name" type="text" value="<?php echo $singleproduct->OWNERNAME; ?>">
+                            "Ingrese el nombre del proveedor" type="text" value="<?php echo $singleproduct->OWNERNAME; ?>">
                       </div>
                     </div>
                   </div>  
@@ -37,18 +37,18 @@
                    <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "OWNERPHONE">Phone:</label>
+                      "OWNERPHONE">TELÉFONO:</label>
 
                       <div class="col-md-8">
                              <input class="form-control input-sm" id="OWNERPHONE" name="OWNERPHONE" placeholder=
-                            "+63 0000000000" type="number" value="<?php echo $singleproduct->OWNERPHONE; ?>">
+                            "056 905678950" type="number" value="<?php echo $singleproduct->OWNERPHONE; ?>">
                       </div>
                     </div>
                   </div> 
                      <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "PRODESC">Description:</label>
+                      "PRODESC">DESCRIPCIÓN:</label>
 
                       <div class="col-md-8"> 
                         <input  id="PROID" name="PROID"   type="hidden" value="<?php echo $singleproduct->PROID; ?>">
@@ -63,11 +63,11 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "CATEGORY">Category:</label>
+                      "CATEGORY">CATEGORÍA:</label>
 
                       <div class="col-md-8">
                        <select class="form-control input-sm" name="CATEGORY" id="CATEGORY">
-                          <option value="None">Select Category</option>
+                          <option value="None">Selecione Categoría</option>
                           <?php
                             //Statement
 
@@ -91,18 +91,18 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "ORIGINALPRICE">Original Price:</label>
+                      "ORIGINALPRICE">COSTO:</label>
 
                       <div class="col-md-3">
                          <input class="form-control input-sm" id="ORIGINALPRICE" name="ORIGINALPRICE" placeholder=
-                            "Original Price" type="number" value="<?php echo $singleproduct->ORIGINALPRICE; ?>">
+                            "Precio Costo" type="number" value="<?php echo $singleproduct->ORIGINALPRICE; ?>">
                       </div>
                        <label class="col-md-2 control-label" for=
-                      "PROPRICE">Price:</label>
+                      "PROPRICE">PRECIO:</label>
 
                       <div class="col-md-3">
                          <input class="form-control input-sm" id="PROPRICE" name="PROPRICE" placeholder=
-                            "Price" type="number" step="any" value="<?php echo $singleproduct->PROPRICE; ?>">
+                            "Precio Ventaa" type="number" step="any" value="<?php echo $singleproduct->PROPRICE; ?>">
                       </div>
                     </div>
                   </div>
@@ -110,11 +110,11 @@
                    <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "PROQTY">Quantity:</label>
+                      "PROQTY">CANTIDAD:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="PROQTY" name="PROQTY" placeholder=
-                            "Quantity" type="number" value="<?php echo $singleproduct->PROQTY; ?>">
+                            "Stock en Inventario" type="number" value="<?php echo $singleproduct->PROQTY; ?>">
                       </div>
                        
                     </div>
@@ -128,7 +128,7 @@
                       "idno"></label>
 
                       <div class="col-md-8">
-                               <button class="btn  btn-primary btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span> Save</button>
+                               <button class="btn  btn-primary btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span> MODIFICAR</button>
                   </div>
                     </div>
                   </div> 

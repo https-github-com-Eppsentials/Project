@@ -115,7 +115,7 @@ function doInsert(){
 			$customer->update($_SESSION['CUSID']);
 
 
-			message("Accounts has been updated!", "success");
+			message("La cuenta de cliente ha sido actualizada", "success");
 			redirect(web_root.'index.php?q=profile');
 		}
 	}
@@ -126,7 +126,7 @@ function doInsert(){
 		if(isset($_SESSION['U_ROLE'])=='Customer'){
 
 			if (isset($_POST['selector'])==''){
-			message("Select the records first before you delete!","error");
+			message("Seleccione las filas antes de eliminar","error");
 			redirect(web_root.'index.php?page=9');
 			}else{
 		
@@ -149,7 +149,7 @@ function doInsert(){
 	}else{
 
 		if (isset($_POST['selector'])==''){
-			message("Select the records first before you delete!","error");
+			message("Seleccione las filas antes de eliminar","error");
 			redirect('index.php');
 			}else{
 
@@ -164,7 +164,7 @@ function doInsert(){
 			$user = New User();
 			$user->delete($id[$i]);
 
-			message("Customer has been Deleted!","info");
+			message("El Cliente ha sido eliminado","info");
 			redirect('index.php');
 
 			}
@@ -207,9 +207,9 @@ function doInsert(){
 			$summary->DELFEE  		= $_POST['PLACE']; 
 			$summary->PAYMENTMETHOD	= $_POST['paymethod'];
 			$summary->PAYMENT 		= $_POST['alltot'];
-			$summary->ORDEREDSTATS 	= 'Pending';
+			$summary->ORDEREDSTATS 	= 'Pendiente';
 			$summary->CLAIMEDDATE		= $_POST['CLAIMEDDATE'];
-			$summary->ORDEREDREMARKS 	= 'Your order is on process.';
+			$summary->ORDEREDREMARKS 	= 'Tu pedido está en proceso';
 			$summary->HVIEW 			= 0	;
 			$summary->create();
 		  }
@@ -224,7 +224,7 @@ function doInsert(){
 		unset($_SESSION['gcCart']);  
 		unset($_SESSION['orderdetails']); 
 
-		message("Order created successfully!", "success"); 		 
+		message("Pedido creado satisfactoriamente", "success"); 		 
 		redirect(web_root."index.php?q=profile");
 
 		}
@@ -239,7 +239,7 @@ function doInsert(){
 	      $mydb->setQuery($query);
 	      $res = $mydb->executeQuery();
 		 if (isset($res)){
-		 		message("Product has been removed in your wishlist", "success"); 		 
+		 		message("El producto ha sido removido de tu lista", "success"); 		 
 			redirect(web_root."index.php?q=profile");
 		 }
 
@@ -263,14 +263,14 @@ function doInsert(){
 		$maxrow = $mydb->num_rows($res);
 
 		if($maxrow>0){
-				message("Product is already added to your wishlist", "error"); 		 
+				message("El producto ya ha sido agregado a tu lista", "error"); 		 
 				redirect(web_root."index.php?q=profile"); 
 		}else{
 				$query ="INSERT INTO `tblwishlist` (`PROID`, `CUSID`, `WISHDATE`, `WISHSTATS`)  VALUES ('{$proid}','{$id}','".DATE('Y-m-d')."',0)";
 				$mydb->setQuery($query);
 				$mydb->executeQuery();
 			 
-	 	message("Product has been added to your wishlist", "success"); 		 
+	 	message("El producto ya ha sido agregado a tu lista", "success"); 		 
 			redirect(web_root."index.php?q=profile"); 
 		}
 			 
@@ -288,7 +288,7 @@ function doInsert(){
 
 
 		if ( $errofile > 0) {
-				message("No Image Selected!", "error");
+				message("No ha seleccionado una imagen", "error");
 				redirect(web_root. "index.php?q=profile");
 		}else{
 	 
@@ -298,7 +298,7 @@ function doInsert(){
 				@$image_size= getimagesize($_FILES['photo']['tmp_name']);
 
 			if ($image_size==FALSE ) {
-				message(web_root. "Uploaded file is not an image!", "error");
+				message(web_root. "El archivo cargado no es una imagen", "error");
 				redirect(web_root. "index.php?q=profile");
 			}else{
 					//uploading the file
@@ -326,7 +326,7 @@ function doInsert(){
 				$customer->update($_SESSION['CUSID']);
 
 
-			message("Password has been updated!", "success");
+			message("La contraseña ha sido actualizada", "success");
 			redirect(web_root.'index.php?q=profile');
 			}
 		}

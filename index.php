@@ -15,74 +15,69 @@ switch ($view) {
  
 
 	case 'product' :
-        $title="Products";	
+        $title="Productos";	//Products
 		$content='menu.php';		
 		break;
  	case 'cart' :
-        $title="Cart List";	
+        $title="Lista de carro";	//Cart List
 		$content='cart.php';		
 		break;
  	case 'profile' :
-        $title="Profile";	
+        $title="Perfil";//Profile
 		$content='customer/profile.php';		
 		break;
 
 	case 'trackorder' :
-        $title="Track Order";	
+        $title="Orden de pista"; //Track Order
 		$content='customer/trackorder.php';		
 		break;
 
 	case 'orderdetails' :  
 
          If(!isset($_SESSION['orderdetails'])){
-         $_SESSION['orderdetails'] = "Order Details";
+         $_SESSION['orderdetails'] = "Detalle Pedido";
 		} 
 		$content='customer/orderdetails.php';	
 
 
 	if( isset($_SESSION['orderdetails'])){
       if (@count($_SESSION['orderdetails'])>0){
-        	$title = 'Cart List' . '| <a href="">Order Details</a>';
+        	$title = 'Lista de Carro' . '| <a href="">Detalle Pedido</a>';
 		      }
 		    } 
 		break;
 
 	case 'billing' : 	
 	 If(!isset($_SESSION['billingdetails'])){
-         $_SESSION['billingdetails'] = "Order Details";
+         $_SESSION['billingdetails'] = "Detalle Pedido";
 		} 
 		$content='customer/customerbilling.php';	
 		if( isset($_SESSION['billingdetails'])){
       if (@count($_SESSION['billingdetails'])>0){
-        	$title = 'Cart List' . '| <a href="">Billing Details</a>';
+        	$title = 'Lista de carro' . '| <a href="">Detalle Facturación</a>';
 		      }
 		    } 	
 		break;
 
 	case 'contact' :
-        $title="Contact Us";	
+        $title="Contáctenos";	
 		$content='contact.php';		
 		break;
  	case 'single-item' :
-        $title="Product";	
+        $title="Productos";	
 		$content='single-item.php';		
 		break;
 
 	case 'recoverpassword' :
-        $title="Recover Password";	
+        $title="Recuperar password";	
 		$content='passwordrecover.php';		
 		break;
 	default :
-	    $title="Home";	
+	    $title="Inicio";	
 		$content ='home.php';		
 
 }
-
-       
-    
  
-require_once("theme/templates.php");
- 
-
+require_once("theme/templates.php"); 
 ?>
 

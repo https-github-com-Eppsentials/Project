@@ -62,7 +62,7 @@ if(isset($_GET['id'])) { //remove to cart
         <div class="panel panel-default">
           <div class="panel-body">  
             <fieldset>  
-              <legend><h2 class="text-left">Cart List</h2></legend>
+              <legend><h2 class="text-left">Lista de carro</h2></legend>
             <form action="index.php?view=orderdetails" method="post">
               <div class="table-responsive">
                <div  class="fixnmix_scroll_carttwo" >
@@ -70,12 +70,12 @@ if(isset($_GET['id'])) { //remove to cart
                      <thead>
                        <tr>
                           <th width="5px">#</th>
-                          <th>Product</th>
-                          <th>Description</th>
-                          <th>Price</th>
-                          <th>Quantity</th>
+                          <th>Producto</th>
+                          <th>Descripción</th>
+                          <th>Precio</th>
+                          <th>Cantidad</th>
                           <th>Total</th>
-                          <th>Action</th>
+                          <th>Acción</th>
                        </tr>
                      </thead>  
                      
@@ -108,7 +108,7 @@ if(isset($_GET['id'])) { //remove to cart
                                       <input type="hidden" name="TOT<?php echo $result->PRODUCTID;  ?>" id="TOT<?php echo $result->PRODUCTID; ?>"  value="<?php echo $_SESSION['fixnmix_cart'][$i]['price'] ?>"/> 
                                       <input type="hidden" name="PRICE<?php echo $result->PRODUCTID;  ?>" id="PRICE<?php echo $result->PRODUCTID; ?>"  value="<?php echo $result->PRICE; ?>"/></td>
                                         <input type="hidden" name="originalqty<?php echo $result->PRODUCTID;  ?>" id="originalqty<?php echo $result->PRODUCTID; ?>"  value="<?php echo $result->QTY;   ?>"/> 
-                                     <td>   <a href="controller.php?action=cartdelete&id=<?php echo $result->PRODUCTID; ?>"  data-id="<?php echo $result->PRODUCTID ?>"   class="delete btn btn-danger btn-xs">Remove</a></td> 
+                                     <td>   <a href="controller.php?action=cartdelete&id=<?php echo $result->PRODUCTID; ?>"  data-id="<?php echo $result->PRODUCTID ?>"   class="delete btn btn-danger btn-xs">Eliminar</a></td> 
                                     </tr>
                           <?php
                             }
@@ -123,7 +123,7 @@ if(isset($_GET['id'])) { //remove to cart
                 </div>
               <table>
            <tfoot  >
-                    <div ><strong><h1 align="right" >Total Price : &#36 <span id="sum">0</span></h1></strong></td></div> 
+                    <div ><strong><h1 align="right" >Importe Total : &#36 <span id="sum">0</span></h1></strong></td></div> 
 
                               
                   </tfoot>
@@ -131,8 +131,8 @@ if(isset($_GET['id'])) { //remove to cart
        </div> 
       </form>   
    
-                <a href="index.php?view=addorder" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<strong>Add Another Products</strong></a>
-               <button type="submit" name="proceed" class="btn btn_fixnmix pull-right"   ><strong>Proceed And Checkout</strong> <span class="glyphicon glyphicon-chevron-right"></span></button> 
+                <a href="index.php?view=addorder" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<strong>Agregar otros productos</strong></a>
+               <button type="submit" name="proceed" class="btn btn_fixnmix pull-right"   ><strong>Proceder y Pagar</strong> <span class="glyphicon glyphicon-chevron-right"></span></button> 
             </form>
        </fieldset>
           </div>    

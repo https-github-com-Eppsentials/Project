@@ -40,7 +40,7 @@
        <form class="form-horizontal span6" action="controller.php?action=edit" method="POST"  />
  
           <fieldset>
-            <legend>New Products</legend> 
+            <legend>NUEVOS PRODUCTOS</legend> 
                  
              <div class="container">     
                 <div class="row">
@@ -49,12 +49,12 @@
                 <div class="form-group">
                     <div class="col-md-12">
                       <label class="col-md-3 control-label" for=
-                      "PRODUCTNAME">Name:</label>
+                      "PRODUCTNAME">Nombre de producto:</label>
 
                       <div class="col-md-8">
                         <input  id="PRODUCTID" name="PRODUCTID"   type="hidden" value="<?php echo $singleproduct->PRODUCTID; ?>">
                          <input class="form-control input-sm" id="PRODUCTNAME" name="PRODUCTNAME" placeholder=
-                            "Product Name" type="text" value="<?php echo $singleproduct->PRODUCTNAME; ?>">
+                            "Nombre de producto" type="text" value="<?php echo $singleproduct->PRODUCTNAME; ?>">
                       </div>
                        
                     </div>
@@ -64,11 +64,11 @@
                   <div class="form-group">
                     <div class="col-md-12">
                       <label class="col-md-3 control-label" for=
-                      "PRODUCTTYPE">Type:</label>
+                      "PRODUCTTYPE">Tipo:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="PRODUCTTYPE" name="PRODUCTTYPE" placeholder=
-                            "Product Type" type="text" value="<?php echo $singleproduct->PRODUCTTYPE; ?>">
+                            "Tipo de producto" type="text" value="<?php echo $singleproduct->PRODUCTTYPE; ?>">
                       </div>
                     </div>
                   </div>
@@ -81,7 +81,7 @@
 
                       <div class="col-md-8">
                        <select class="form-control input-sm" name="ORIGIN" id="ORIGIN">
-                          <option value="None">Select Origin</option>
+                          <option value="None">Seleccionar origen</option>
                           <?php
 
                           $origin = New Origin();
@@ -105,11 +105,11 @@
                   <div class="form-group">
                     <div class="col-md-12">
                       <label class="col-md-3 control-label" for=
-                      "CATEGORY">Category:</label>
+                      "CATEGORY">Categoría:</label>
 
                       <div class="col-md-8">
                        <select class="form-control input-sm" name="CATEGORY" id="CATEGORY">
-                          <option value="None">Select Category</option>
+                          <option value="None">Seleccionar categoría</option>
                           <?php
                             //Statement
 
@@ -133,11 +133,11 @@
                   <div class="form-group">
                     <div class="col-md-12">
                       <label class="col-md-3 control-label" for=
-                      "QTY">Quantity:</label>
+                      "QTY">Cantidad:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="QTY" name="QTY" placeholder=
-                            "Quantity" type="text" value="<?php echo $singleproduct->QTY; ?>">
+                            "Cantidad" type="text" value="<?php echo $singleproduct->QTY; ?>">
                       </div>
                     </div>
                   </div>
@@ -145,11 +145,11 @@
                   <div class="form-group">
                     <div class="col-md-12">
                       <label class="col-md-3 control-label" for=
-                      "PRICE">Price:</label>
+                      "PRICE">Precio:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="PRICE" name="PRICE" placeholder=
-                            "Price" type="TEXT" value="<?php echo $singleproduct->PRICE; ?>">
+                            "Precio venta" type="TEXT" value="<?php echo $singleproduct->PRICE; ?>">
                       </div>
                     </div>
                   </div>
@@ -157,11 +157,11 @@
                    <div class="form-group">
                     <div class="col-md-12">
                       <label class="col-md-3 control-label" for=
-                      "DESCRIPTION">Description:</label>
+                      "DESCRIPTION">Descripción producto:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="DESCRIPTION" name="DESCRIPTION" placeholder=
-                            "Description" type="text" value="<?php echo $singleproduct->DESCRIPTION; ?>">
+                            "Descripción" type="text" value="<?php echo $singleproduct->DESCRIPTION; ?>">
                       </div>
                     </div>
                   </div>
@@ -172,7 +172,7 @@
                       "idno"></label>
 
                       <div class="col-md-8">
-                        <button class="btn btn-btn_fixnmix" name="save" type="submit" >Save</button>
+                        <button class="btn btn-btn_fixnmix" name="save" type="submit" >GRABAR</button>
                       </div>
                     </div>
                   </div>
@@ -202,7 +202,7 @@
   
        
     <footer>
-        <p>© Company janno</p>
+        <p>© E.Y.Y.A. CorpSoftware S.A.C.</p>
     </footer>
 </div>
 <!--/.fluid-container-->

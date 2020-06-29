@@ -28,19 +28,19 @@
         <div class="panel panel-default">
           <div class="panel-body">  
             <fieldset>  
-              <legend><h2 class="text-left">Order Details</h2></legend>
+              <legend><h2 class="text-left">Detalle Pedido</h2></legend>
 
             <table class="fixnmix-table">
           
               <tbody>
                 <tr>
-                <td width="100px">First Name </td><td  width="350px"> 
+                <td width="100px">Nombres</td><td  width="350px"> 
                          <input  id="FIRSTNAME" name="FIRSTNAME"  class="form-control input-sm"  type="text" value="<?php echo isset($_SESSION['FIRSTNAME'])? $_SESSION['FIRSTNAME'] : ""; ?>"></td>
-                <td width="100px">Last Name</td><td> <input  id="LASTNAME" name="LASTNAME"  class="form-control input-sm"  type="text" value="<?php echo isset($_SESSION['LASTNAME'])? $_SESSION['LASTNAME'] : ""; ?>"></td>
+                <td width="100px">Apellidos</td><td> <input  id="LASTNAME" name="LASTNAME"  class="form-control input-sm"  type="text" value="<?php echo isset($_SESSION['LASTNAME'])? $_SESSION['LASTNAME'] : ""; ?>"></td>
                 </tr>
                 <tr>
-                <td>Address </td><td> <input  id="ADDRESS" name="ADDRESS"  class="form-control input-sm"  type="text" value="<?php echo isset($_SESSION['ADDRESS'])? $_SESSION['ADDRESS'] : ""; ?>"></td>
-                 <td  width="100px">Contact Number  </td><td  width="350px"> <input  id="CONTACTNUMBER" name="CONTACTNUMBER"  class="form-control input-sm"  type="number" value="<?php  echo isset($_SESSION['CONTACTNUMBER'])? $_SESSION['CONTACTNUMBER'] : "";?>"></td>
+                <td>Dirección </td><td> <input  id="ADDRESS" name="ADDRESS"  class="form-control input-sm"  type="text" value="<?php echo isset($_SESSION['ADDRESS'])? $_SESSION['ADDRESS'] : ""; ?>"></td>
+                 <td  width="100px">Teléfono  </td><td  width="350px"> <input  id="CONTACTNUMBER" name="CONTACTNUMBER"  class="form-control input-sm"  type="number" value="<?php  echo isset($_SESSION['CONTACTNUMBER'])? $_SESSION['CONTACTNUMBER'] : "";?>"></td>
               </tr>        
               </tbody> 
              <tfoot><tr><td></td></tr></tfoot>
@@ -50,10 +50,10 @@
                 <thead >
                 <tr>
                   <th width="10">#</th>
-                  <th>Product</th>
-                  <th>Description</th>
-                  <th>Quantity</th>
-                  <th style="width:100px">Price</th>
+                  <th>Producto</th>
+                  <th>Descripción</th>
+                  <th>Cantidad</th>
+                  <th style="width:100px">Precio</th>
                   <th style="width:120px">Total</th>
                   </tr>
                 </thead>
@@ -103,8 +103,8 @@
                 $res = $autonum->single_autonumber(3);
                 ?>
                  <input  id="ORDERNUMBER" name="ORDERNUMBER"   type="hidden" value="<?php echo $res->AUTO; ?>"> 
-                  <a href="index.php?view=addtocart" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<strong>View Cart</strong></a>
-                <button   name="submitorder"  id ="submitorder" class="btn btn_fixnmix pull-right"  onclick="validatedate()" ><strong>Save Order</strong> <span class="glyphicon glyphicon-chevron-right"></span></button> 
+                  <a href="index.php?view=addtocart" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<strong>Ver Carrito</strong></a>
+                <button   name="submitorder"  id ="submitorder" class="btn btn_fixnmix pull-right"  onclick="validatedate()" ><strong>Guardar Pedido</strong> <span class="glyphicon glyphicon-chevron-right"></span></button> 
            
             </fieldset>
           </div>    

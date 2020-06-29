@@ -12,7 +12,7 @@
 	<div class="row">
 		<form class="form-inline pull-right" action="index.php" method="post"> 
 		 <div class="form-group">
-		<h3>Date Filter :: </h3>
+		<h3>Filtro de Fecha: </h3>
 		</div>
 		 <div class="form-group">
 		 <input class="form-control date start input-lg" size="20" type="date" value="<?php echo (isset($_POST['start'])) ? $_POST['start'] : ''; ?>" Placeholder="Check In" name="start" id="from" data-date="" data-date-format="yyyy-mm-dd" data-link-field="any" data-link-format="yyyy-mm-dd">
@@ -27,17 +27,17 @@
  
 <form  method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
 <span id="printout">
-<div class="row" ><h3 align="center">Overall Income in <?php echo ((@$_POST['start']) ? $_POST['start'] : '') . ' to ' .  ((@$_POST['end']) ? $_POST['end'] : '');?></h3></div>
+<div class="row" ><h3 align="center">Ingresos generales en <?php echo ((@$_POST['start']) ? $_POST['start'] : '') . ' to ' .  ((@$_POST['end']) ? $_POST['end'] : '');?></h3></div>
 <table  class="table table-bordered" cellspacing="0">
 <thead>
 <tr bgcolor="#bbd43b">
-<td ><strong>Name</strong></td>
-<td ><strong>Order Number</strong></td>
-<td ><strong>Date Ordered</strong></td>
+<td ><strong>Nombre</strong></td>
+<td ><strong>Número Orden</strong></td>
+<td ><strong>Fecha Orden</strong></td>
 <!-- <td ><strong>Date Claimed</strong></td>  -->
-<td ><strong>Payment Method</strong></td> 
+<td ><strong>Método de Pago</strong></td> 
 <!-- <td ><strong>Quantity</strong></td> -->
-<td ><strong>Total Price</strong></td>
+<td ><strong>Importe Total</strong></td>
 </tr>
 </thead>
 <tbody>		
@@ -51,7 +51,7 @@ if(isset($_POST['submit'])){
 // AND s.`ORDEREDNUM` = o.`ORDEREDNUM` 
 // AND c.`CUSTOMERID` = s.`CUSTOMERID` 
 	$query = "SELECT  *  
-				FROM  `tblcustomer` c,  `tblsummary` s WHERE  c.`CUSTOMERID` = s.`CUSTOMERID` AND  ORDEREDSTATS='Confirmed' AND date(ORDEREDDATE)>='".$_POST['start']."' AND date(ORDEREDDATE) <='".$_POST['end']."'";
+				FROM  `tblcustomer` c,  `tblsummary` s WHERE  c.`CUSTOMERID` = s.`CUSTOMERID` AND  ORDEREDSTATS='Confirmado' AND date(ORDEREDDATE)>='".$_POST['start']."' AND date(ORDEREDDATE) <='".$_POST['end']."'";
 				$result = mysql_query($query) or die(mysql_error());
 
 		$rowcount = mysql_num_rows($result) or die(mysql_error());
@@ -75,7 +75,7 @@ if(isset($_POST['submit'])){
 		}
 
 	}else{
-			echo '<tr><td colspan="7" align="center"><h2>Please Enter Then Dates</h2></td></tr>';
+			echo '<tr><td colspan="7" align="center"><h2>Por favor ingresar las fechas</h2></td></tr>';
 
 	}
 		 
@@ -86,12 +86,12 @@ if(isset($_POST['submit'])){
 </table>
 <table>
 	<tfoot style="margin-right:10%">
-<tr> <h4 align="right"> Overall Price : &#36 <?php echo isset( $overall) ? $overall : 0; ?></h4>  </tr>
+<tr> <h4 align="right"> Precio Total : &#36 <?php echo isset( $overall) ? $overall : 0; ?></h4>  </tr>
 	
 </tfoot>
 </table>
 </span>
-<button onclick="tablePrint();" class="btn btn_fixnmix"><span class="glyphicon glyphicon-print"></span> Print Report</button>
+<button onclick="tablePrint();" class="btn btn_fixnmix"><span class="glyphicon glyphicon-print"></span> Imprimir Reporte</button>
  
 </form>
 </div>

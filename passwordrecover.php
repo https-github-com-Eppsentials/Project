@@ -74,8 +74,8 @@
               <div class="panel-body">
                 <div class="text-center">
                   <h3><i class="fa fa-lock fa-4x"></i></h3>
-                  <h2 class="text-center">Forgot Password?</h2>
-                  <p>Put your code here.</p>
+                  <h2 class="text-center">¿Olvidó su password?</h2>
+                  <p>Pon tu código aquí.</p>
                   <?php echo isset($codemessage) ? $codemessage : "";?>
                   <div class="panel-body">
     
@@ -89,7 +89,7 @@
                       </div>
                       <div class="form-group">
                         <input name="validatecode-submit" class="btn btn-lg btn-primary btn-block" value="Submit" type="submit">
-                        <a href="index.php">Back to site</a>
+                        <a href="index.php">Regresar al sitio.</a>
                       </div> 
                       <input type="hidden" class="hide" name="token" id="token" value=""> 
                     </form>
@@ -109,8 +109,8 @@
               <div class="panel-body">
                 <div class="text-center">
                   <h3><i class="fa fa-lock fa-4x"></i></h3>
-                  <h2 class="text-center">Forgot Password?</h2>
-                  <p>Change your password.</p>
+                  <h2 class="text-center">¿Olvidó su password?</h2>
+                  <p>Cambia tu password.</p>
                   <div class="panel-body">
     
                     <form id="register-form" role="form" autocomplete="off" class="form" method="post">
@@ -123,7 +123,7 @@
                       </div>
                       <div class="form-group">
                         <input name="savepass-submit" class="btn btn-lg btn-primary btn-block" value="Save" type="submit">
-                        <a href="index.php">Back to site</a>
+                        <a href="index.php">Regresar al sitio</a>
                       </div> 
                       <input type="hidden" class="hide" name="token" id="token" value="<?php echo $_SESSION['phonenumber']; ?>"> 
                     </form>
@@ -139,8 +139,8 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-4">
-          	<h2 style="color: blue">Password has been change</h2>
-          	 <a href="index.php">Back to login</a>
+          	<h2 style="color: blue">El password ha sido cambiado</h2>
+          	 <a href="index.php">Volver a Login</a>
           </div>
 	</div>
 <?php  }else{ ?>
@@ -151,8 +151,8 @@
               <div class="panel-body">
                 <div class="text-center">
                   <h3><i class="fa fa-lock fa-4x"></i></h3>
-                  <h2 class="text-center">Forgot Password?</h2>
-                  <p>You can reset your password here.</p>
+                  <h2 class="text-center">¿Olvidó su password?</h2>
+                  <p>Puedes restablecer tu contraseña aquí.</p>
                    <?php echo isset($phonemessage) ? $phonemessage : "";?>
                   <div class="panel-body">
     
@@ -166,7 +166,7 @@
                       </div>
                       <div class="form-group">
                         <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Send" type="submit">
-                        <a href="index.php">Back to site</a>
+                        <a href="index.php">Regresar al sitio</a>
                       </div> 
                       <input type="hidden" class="hide" name="token" id="token" value=""> 
                     </form>

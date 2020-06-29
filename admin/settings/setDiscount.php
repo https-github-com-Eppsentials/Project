@@ -45,10 +45,10 @@ $query = "SELECT * FROM `tblproduct` p  ,`tblcategory` c ,`tblpromopro` pr
                 <!-- <h3>Project Details</h3> -->
                 <ul>
                     <!-- <li>Model - <?php echo $result->PROMODEL; ?></li> -->
-                    <li>Type - <?php echo $result->PRODESC; ?></li>
-                    <li>Price - &#36 <?php echo $result->PROPRICE; ?></li>
-                    <li>Discount - <?php echo $result->PRODISCOUNT; ?> % </li> 
-                    <li>Discounted Price - &#36 <?php echo $result->PRODISPRICE; ?> </li> 
+                    <li>Tipo - <?php echo $result->PRODESC; ?></li>
+                    <li>Precio - &#36 <?php echo $result->PROPRICE; ?></li>
+                    <li>Descuento - <?php echo $result->PRODISCOUNT; ?> % </li> 
+                    <li>Precio Descuento - &#36 <?php echo $result->PRODISPRICE; ?> </li> 
                 </ul>
 
                 
@@ -58,11 +58,11 @@ $query = "SELECT * FROM `tblproduct` p  ,`tblcategory` c ,`tblpromopro` pr
 </div>
 <div class="row">
         <div class="col-md-12">
-        <h3 class="page-header">Set Discount</h3>
+        <h3 class="page-header">ESTABLECER DESCUENTO</h3>
         <div class="col-md-6">
  
              <div class="form-group">
-                <label>Discount:</label>
+                <label>Descuento:</label>
 
                 
                 <div class="input-group">
@@ -84,7 +84,7 @@ $query = "SELECT * FROM `tblproduct` p  ,`tblcategory` c ,`tblpromopro` pr
         </div>
           <div class="col-md-6">
              <div class="form-group">
-                <label>Discounted Price:</label>
+                <label>Precio Descuento:</label>
 
                
                 <div class="input-group">
@@ -99,7 +99,7 @@ $query = "SELECT * FROM `tblproduct` p  ,`tblcategory` c ,`tblpromopro` pr
           </div>
          <div class="col-md-10">
              <div class="form-group">  
-                  <input type="submit"  class="btn btn-sm btn-primary " name="submit"  value="Submit" > 
+                  <input type="submit"  class="btn btn-sm btn-primary " name="submit"  value="Enviar" > <!-- value="Submit" -->
               </div>
                
           </div>

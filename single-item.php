@@ -7,9 +7,7 @@ $query = "SELECT * FROM `tblpromopro` pr , `tblproduct` p , `tblcategory` c
 
 
   foreach ($cur as $result) { 
-   
  ?>
-
         <!-- Portfolio Item Row -->
    <form   method="POST" action="cart/controller.php?action=add">
         
@@ -40,17 +38,17 @@ $query = "SELECT * FROM `tblpromopro` pr , `tblproduct` p , `tblcategory` c
                 <!-- <h3>Project Details</h3> -->
                 <ul>
                     <!-- <li>Model - <?php echo $result->PROMODEL; ?></li> -->
-                    <li>Type - <?php echo $result->PRODESC; ?></li>
-                    <li>Price - &#36 <?php echo $result->PROPRICE; ?></li>
+                    <li>Tipo - <?php echo $result->PRODESC; ?></li>
+                    <li>Precio - &#36 <?php echo $result->PROPRICE; ?></li>
                     <?php if($result->PRODISCOUNT>0){ ?>
-                    <li>Discount - <?php echo $result->PRODISCOUNT; ?> % </li> 
+                    <li>Descuento - <?php echo $result->PRODISCOUNT; ?> % </li> 
 
-                    <li>Discounted Price - &#36 <?php echo $result->PRODISPRICE; ?> </li> 
+                    <li>Precio Descuento - &#36 <?php echo $result->PRODISPRICE; ?> </li> 
                     <?php } ?>
-                    <li>Available Quantity - <?php echo $result->PROQTY; ?></li>
+                    <li>Cantidad Disponible - <?php echo $result->PROQTY; ?></li>
                 </ul>
 
-                 <button  type="submit"  class="btn btn-pup btn-sm"  name="btnorder">Order Now!</button>
+                 <button  type="submit"  class="btn btn-pup btn-sm"  name="btnorder">¡Pedir Ahora!</button>
             </div>
 <?php } ?>       
         </div>
@@ -67,7 +65,7 @@ $query = "SELECT * FROM `tblpromopro` pr , `tblproduct` p , `tblcategory` c
         <div class="row">
 
             <div class="col-lg-12">
-                <h3 class="page-header">Related Products</h3>
+                <h3 class="page-header">Productos Relacionados</h3>
             </div>
 <?php
 

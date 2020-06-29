@@ -30,7 +30,7 @@
           </a>  
         </div>
         <div class="col-md-6">
-            <h1><strong>Customer Details</strong></h1><br>
+            <h1><strong>Detalle de Cliente</strong></h1><br>
             <div class="table-responsive">
             <table class="table table-condensed table-responsive table-user-information">
                 <tbody>
@@ -50,7 +50,7 @@
                         <td>
                             <strong>
                                 <!-- <span class="glyphicon glyphicon-cloud text-primary"></span>   -->
-                                Name                                                
+                                Nombre                                                
                             </strong>
                         </td>
                         <td class="text-primary">
@@ -75,7 +75,7 @@
                         <td>
                             <strong>
                                 <!-- <span class="glyphicon glyphicon-eye-open text-primary"></span>  -->
-                                Address                                                
+                                Dirección                                                
                             </strong>
                         </td>
                         <td class="text-primary">
@@ -98,7 +98,7 @@
                         <td>
                             <strong>
                                 <!-- <span class="glyphicon glyphicon-eye-open text-primary"></span>  -->
-                                Contact Number                                                
+                                Teléfono                                              
                             </strong>
                         </td>
                         <td class="text-primary">
@@ -110,7 +110,7 @@
                         <td>
                             <strong>
                                 <!-- <span class="glyphicon glyphicon-eye-open text-primary"></span>  -->
-                                Zipcode                                                
+                                Código Postal                                                
                             </strong>
                         </td>
                         <td class="text-primary">
@@ -148,7 +148,7 @@
             </ul> -->
         </div>
         <div class="col-md-6">
-            <h1><strong>Product Details</strong></h1><br>
+            <h1><strong>Detalle de Productos</strong></h1><br>
             <div class="table-responsive">
             <table class="table table-condensed table-responsive table-user-information">
                 <tbody>
@@ -157,7 +157,7 @@
                         <td>
                             <strong>
                                 <!-- <span class="glyphicon glyphicon-user  text-primary"></span>     -->
-                                Name                                                
+                                Nombre                                                
                             </strong>
                         </td>
                         <td class="text-primary">
@@ -168,7 +168,7 @@
                         <td>
                             <strong>
                                 <!-- <span class="glyphicon glyphicon-cloud text-primary"></span>   -->
-                                Category                                                
+                                Categoría                                                
                             </strong>
                         </td>
                         <td class="text-primary">
@@ -180,7 +180,7 @@
                         <td>
                             <strong>
                                 <!-- <span class="glyphicon glyphicon-bookmark text-primary"></span>  -->
-                                Price                                                
+                                Precio                                                
                             </strong>
                         </td>
                         <td class="text-primary">
@@ -193,7 +193,7 @@
                         <td>
                             <strong>
                                 <!-- <span class="glyphicon glyphicon-eye-open text-primary"></span>  -->
-                                Available Quantity                                                
+                                Cantidad disponible                                           
                             </strong>
                         </td>
                         <td class="text-primary">
@@ -205,7 +205,7 @@
 						<tr>        
                         <td>
                             
-							<a href="index.php" class="btn btn_fixnmix" name="back" type="submit">Back</a>
+							<a href="index.php" class="btn btn_fixnmix" name="back" type="submit">Regresar</a>
                         </td>
                         <td>
                             

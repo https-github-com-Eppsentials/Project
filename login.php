@@ -16,7 +16,7 @@ if(isset($_POST['sidebarLogin'])){
   
    if ($email == '' OR $upass == '') {
 
-      message("Usuario Inválido y Contraseña!", "error");
+      message("Usuario Inválido y Contraseña prueba", "error");
       redirect(web_root."index.php");
          
     } else {   
@@ -28,7 +28,7 @@ if(isset($_POST['sidebarLogin'])){
 
            redirect(web_root."index.php?q=profile");
         }else{
-             message("Invalid Username and Password! Please contact administrator", "error");
+             message("Credenciales no válidas! Por favor contactar al administrador", "error");
              redirect(web_root."index.php");
         }
  
@@ -43,7 +43,7 @@ if(isset($_POST['sidebarLogin'])){
   $h_upass = sha1($upass);
   
    if ($email == '' OR $upass == '') { 
-      message("Usuario inválido and Password!", "error");
+      message("Usuario y password inválido!", "error");
        redirect(web_root."index.php?page=6");
          
     } else {   
@@ -64,7 +64,7 @@ if(isset($_POST['sidebarLogin'])){
 
          
         }else{
-             message("Invalid Username and Password! Please contact administrator", "error");
+             message("Credenciales no válidas! Por favor contactar al administrador", "error");
              redirect(web_root."index.php");
         }
  

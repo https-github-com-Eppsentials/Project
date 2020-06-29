@@ -44,7 +44,7 @@ function doInsert(){
 
 
 		if ( $errofile > 0) {
-				message("No Image Selected!", "error");
+				message("¡Imagen no seleccionada!", "error");
 				redirect("index.php?view=add");
 		}else{
 	 
@@ -54,7 +54,7 @@ function doInsert(){
 				@$image_size= getimagesize($_FILES['image']['tmp_name']);
 
 			if ($image_size==FALSE || $type=='video/wmv') {
-				message("Uploaded file is not an image!", "error");
+				message("¡Archivo cargado no es una imagen!", "error");
 				redirect("index.php?view=add");
 			}else{
 					//uploading the file
@@ -62,17 +62,13 @@ function doInsert(){
 		 	
 					if ($_POST['PRODESC'] == "" OR $_POST['PROPRICE'] == "") {
 					$messageStats = false;
-					message("All fields are required!","error");
+					message("Todos los campos son requeridos!","error");
 					redirect('index.php?view=add');
 					}else{	
 
 			 
 						$autonumber = New Autonumber();
-						$res = $autonumber->set_autonumber('PROID');
-
-  				 	 	
-
-
+						$res = $autonumber->set_autonumber('PROID'); 
   				 	 	$product = New Product(); 
   				 	 	$product->PROID 		= $res->AUTO; 
 						$product->OWNERNAME 		= $_POST['OWNERNAME']; 
@@ -92,15 +88,10 @@ function doInsert(){
 						$promo = New Promo();  
 						$promo->PROID		= $res->AUTO;  
 						$promo->PRODISPRICE	= $_POST['PROPRICE'];     
-						$promo->create();
-  					 
-
+						$promo->create(); 
 						$autonumber = New Autonumber();
-						$autonumber->auto_update('PROID');
-
-
-
-						message("New Product created successfully!", "success");
+						$autonumber->auto_update('PROID'); 
+						message("¡EL NUEVO PRODUCO HA SIDO REGISTRADO!", "success");
 						redirect("index.php");
 						}
 							
@@ -150,7 +141,7 @@ function doInsert(){
 						$product->update($_POST['PROID']);
   
 
-			message("Product has been updated!", "success");
+			message("¡EL PRODUCTO HA SIDO ACTUALIZADO!", "success");
 			redirect("index.php");
 	  }
 	redirect("index.php"); 
@@ -162,7 +153,7 @@ function doInsert(){
  
 
 		if (isset($_POST['selector'])==''){
-			message("Select the records first before you delete!","error");
+			message("¡SELECCIONA LAS FILAS PRIMERO ANTES DE ELIMINAR!","error");
 			redirect('index.php');
 			}else{
 
@@ -181,7 +172,7 @@ function doInsert(){
 			$promo = New Promo();   
 			$promo->delete($id[$i]);
 
-			message("Product has been Deleted!","info");
+			message("EL PRODUCTO HA SIDO ELIMINADO!","info");
 			redirect('index.php');
 
 			}
@@ -199,7 +190,7 @@ function doInsert(){
 
 
 		if ( $errofile > 0) {
-				message("No Image Selected!", "error");
+				message("¡IMAGEN NO SELECCIONADA!", "error");
 				redirect("index.php?view=view&id=". $_POST['proid']);
 		}else{
 	 
@@ -209,7 +200,7 @@ function doInsert(){
 				@$image_size= getimagesize($_FILES['photo']['tmp_name']);
 
 			if ($image_size==FALSE ) {
-				message("Uploaded file is not an image!", "error");
+				message("¡EL ARCHIVO CARGADO NO ES UNA IMAGEN!", "error");
 				redirect("index.php?view=view&id=". $_POST['proid']);
 			}else{
 					//uploading the file
@@ -246,7 +237,7 @@ function doInsert(){
 		$promo->PROBANNER  =1;    
 		$promo->update($_POST['PROID']);
 
-		msgBox("Discount has been set.");
+		msgBox("El descuento se ha establecido.");
 
 		redirect("index.php"); 
  		}
@@ -261,7 +252,7 @@ function doInsert(){
 		$promo->PROBANNER  =1;    
 		$promo->update($_POST['PROID']);
 
-		msgBox("Discount has been set.");
+		msgBox("El descuento se ha establecido.");
 
 		redirect("index.php"); 
  		}

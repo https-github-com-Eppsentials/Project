@@ -11,13 +11,13 @@ require_once ("../../include/initialize.php");
 
 // if ($_POST['actions']=='confirm') {
 // 							# code...
-// 	$status	= 'Confirmed';	
-// 	// $remarks ='Your order has been confirmed. The ordered products will be yours in the exact date and time that you have set.';
+// 	$status	= 'Confirmado';	
+// 	// $remarks ='Your order has been confirmado. The ordered products will be yours in the exact date and time that you have set.';
 	 
 // }elseif ($_POST['actions']=='cancel'){
 // 	// $order = New Order();
-// 	$status	= 'Cancelled';
-// 	// $remarks ='Your order has been cancelled due to lack of communication and incomplete information.';
+// 	$status	= 'Cancelado';
+// 	// $remarks ='Your order has been cancelado due to lack of communication and incomplete information.';
 // }
 
 // $order = New Order();

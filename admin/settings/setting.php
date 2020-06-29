@@ -2,7 +2,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Settings
+                            AJUSTES
                         </div>
                         <!-- .panel-heading -->
                         <div class="panel-body">
@@ -10,7 +10,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Product</a>
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Producto</a>
                                         </h4>
                                     </div>
                                     <div id="collapseOne" class="panel-collapse collapse in">
@@ -22,7 +22,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Set Delivery Fee</a>
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Establecer Tarifa de Entrega</a>
                                         </h4>
                                     </div>
                                     <div id="collapseTwo" class="panel-collapse collapse">

@@ -12,39 +12,39 @@
             <div class="carousel-inner">
               <div class="item active">
                 <div class="col-sm-6">
-                  <h1><span>E</span>-SHOPPER</h1>
-                  <h2>Free E-Commerce Template</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                  <h1><span>MoliService</span> El Chotano</h1>
+                  <h2>ETAPA INICIO</h2>
+                  <p>Comercializamos todos los aditivos y vitaminas necesarias para el inicio de la alimentación de sus aves de engorde</p>
                  
                 </div>
                 <div class="col-sm-6">
-                  <img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
-                  <img src="images/home/pricing.png"  class="pricing" alt="" />
+                  <img src="images/home/inicio.jpg" class="girl img-responsive" alt="" />
+                  <img src="images/home/oferta.png"  class="pricing" alt=""  />
                 </div>
               </div>
               <div class="item">
                 <div class="col-sm-6">
-                  <h1><span>E</span>-SHOPPER</h1>
-                  <h2>100% Responsive Design</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <h1><span>MoliService</span> El Chotano</h1>
+                  <h2>ETAPA CRECIMIENTO</h2>
+                  <p>Contamos con los mejores Promotores de Crecimiento, Aminoácidos, Antioxidantes y mucho más para que acompañe al desarrollo de sus aves de engorde.</p>
                  
                 </div>
                 <div class="col-sm-6">
-                  <img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
-                  <img src="images/home/pricing.png"  class="pricing" alt="" />
+                  <img src="images/home/crecimiento.jpg" class="girl img-responsive" alt="" />
+                  <img src="images/home/oferta.png"  class="pricing" alt=""/>
                 </div>
               </div>
               
               <div class="item">
                 <div class="col-sm-6">
-                  <h1><span>E</span>-SHOPPER</h1>
-                  <h2>Free Ecommerce Template</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <h1><span>MoliService</span> El Chotano</h1>
+                  <h2>ETAPA ACABADO</h2>
+                  <p>Los mejores productos para el finalizado de su producción, pigmentantes, secuestrantes de micotoxinas y demás, los encontrará aquí. ¡Qué espera! </p>
                  
                 </div>
                 <div class="col-sm-6">
-                  <img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
-                  <img src="images/home/pricing.png" class="pricing" alt="" />
+                  <img src="images/home/finalizador.jpg" class="girl img-responsive" alt="" />
+                  <img src="images/home/oferta.png" class="pricing" alt="" />
                 </div>
               </div>
               
@@ -72,12 +72,12 @@
         
         <div class="col-sm-9 padding-right">
           <div class="features_items"><!--features_items-->
-            <h2 class="title text-center">Features Items</h2>
+            <h2 class="title text-center">Catálogo de Artículos</h2>
 
             <?php
 
             $query = "SELECT * FROM `tblpromopro` pr , `tblproduct` p , `tblcategory` c
-            WHERE pr.`PROID`=p.`PROID` AND  p.`CATEGID` = c.`CATEGID`  AND PROQTY>0 ";
+            WHERE pr.`PROID`=p.`PROID` AND  p.`CATEGID` = c.`CATEGID`  AND PROQTY>0 and prostats = 'Disponible'";
             $mydb->setQuery($query);
             $cur = $mydb->loadResultList();
            
@@ -96,13 +96,13 @@
                       <img src="<?php  echo web_root.'admin/products/'. $result->IMAGES; ?>" alt="" />
                       <h2>&#36 <?php  echo $result->PRODISPRICE; ?></h2>
                       <p><?php  echo    $result->PRODESC; ?></p>
-                      <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                      <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
                     </div>
                     <div class="product-overlay">
                       <div class="overlay-content">
                         <h2>&#36 <?php  echo $result->PRODISPRICE; ?></h2>
                         <p><?php  echo    $result->PRODESC; ?></p>
-                       <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                       <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
                       </div>
                     </div>
                 </div>
@@ -112,11 +112,11 @@
                               <?php     
                             if (isset($_SESSION['CUSID'])){  
 
-                              echo ' <a href="'.web_root. 'customer/controller.php?action=addwish&proid='.$result->PROID.'" title="Add to wishlist"><i class="fa fa-plus-square"></i>Add to wishlist</a></a>
+                              echo ' <a href="'.web_root. 'customer/controller.php?action=addwish&proid='.$result->PROID.'" title="Agregar a Lista de Deseost"><i class="fa fa-plus-square"></i>Añadir a la Lista</a></a>
                             ';
 
                              }else{
-                               echo   '<a href="#" title="Add to wishlist" class="proid"  data-target="#smyModal" data-toggle="modal" data-id="'.  $result->PROID.'"><i class="fa fa-plus-square"></i>Add to wishlist</a></a>
+                               echo   '<a href="#" title="Agregar a Lista de Deseos" class="proid"  data-target="#smyModal" data-toggle="modal" data-id="'.  $result->PROID.'"><i class="fa fa-plus-square"></i>Añadir a la Lista</a></a>
                             ';
                             }  
                             ?>
@@ -132,14 +132,14 @@
           </div><!--features_items--> 
           
           <div class="recommended_items"><!--recommended_items-->
-            <h2 class="title text-center">recommended items</h2>
+            <h2 class="title text-center">Productos recomendados</h2>
             
             <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
                 <div class="item active"> 
                          <?php 
                     $query = "SELECT * FROM `tblpromopro` pr , `tblproduct` p , `tblcategory` c
-                    WHERE pr.`PROID`=p.`PROID` AND  p.`CATEGID` = c.`CATEGID`  AND PROQTY>0 limit 3 ";
+                    WHERE pr.`PROID`=p.`PROID` AND  p.`CATEGID` = c.`CATEGID` AND prostats = 'Disponible' AND PROQTY>0 limit 3 ";
                     $mydb->setQuery($query);
                     $cur = $mydb->loadResultList();
                    
@@ -157,7 +157,7 @@
                           <img src="<?php  echo web_root.'admin/products/'. $result->IMAGES; ?>" alt="" />
                           <h2>&#36 <?php  echo $result->PRODISPRICE; ?></h2>
                           <p><?php  echo    $result->PRODESC; ?></p>
-                           <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                           <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
                         </div>
                         
                       </div>
@@ -169,7 +169,7 @@
                 <div class="item">  
                   <?php 
                     $query = "SELECT * FROM `tblpromopro` pr , `tblproduct` p , `tblcategory` c
-                    WHERE pr.`PROID`=p.`PROID` AND  p.`CATEGID` = c.`CATEGID`  AND PROQTY>0 limit 3,6";
+                    WHERE pr.`PROID`=p.`PROID` AND  p.`CATEGID` = c.`CATEGID`  AND prostats = 'Disponible' AND PROQTY>0 limit 3,6";
                     $mydb->setQuery($query);
                     $cur = $mydb->loadResultList();
                    
@@ -187,7 +187,7 @@
                           <img src="<?php  echo web_root.'admin/products/'. $result->IMAGES; ?>" alt="" />
                           <h2>&#36 <?php  echo $result->PRODISPRICE; ?></h2>
                           <p><?php  echo    $result->PRODESC; ?></p>
-                           <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                           <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
                         </div>
                         
                       </div>

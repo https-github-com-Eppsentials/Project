@@ -43,17 +43,17 @@ require_once("include/initialize.php");
                     <!-- <h3>Project Details</h3> -->
                     <ul>
                       <!-- <li>Model - <?php echo $cur->PROMODEL; ?></li> -->
-                      <li>Type - <?php echo $cur->PRODESC; ?></li>
-                      <li>Price - &#36 <?php echo $cur->PROPRICE; ?></li>
+                      <li>Tipo - <?php echo $cur->PRODESC; ?></li>
+                      <li>Precio - &#36 <?php echo $cur->PROPRICE; ?></li>
                        <?php if($cur->PRODISCOUNT>0){ ?>
-                        <li>Discount - <?php echo $cur->PRODISCOUNT; ?> % </li> 
+                        <li>Descuento - <?php echo $cur->PRODISCOUNT; ?> % </li> 
 
-                        <li>Discounted Price - &#36 <?php echo $cur->PRODISPRICE; ?> </li> 
+                        <li>Precio Descuento - &#36 <?php echo $cur->PRODISPRICE; ?> </li> 
                         <?php } ?>
-                      <li>Available Quantity - <?php echo $cur->PROQTY; ?></li>
+                      <li>Cantidad disponible - <?php echo $cur->PROQTY; ?></li>
                     </ul> 
-                    <button class="btn btn-pup"  name="btnorder" type="Submit">Order Now!</button> 
-                    <button class="btn btn-default" id="btn_close" data-dismiss="modal" type="button">Close</button> 
+                    <button class="btn btn-pup"  name="btnorder" type="Submit">Pedir ahora!</button> 
+                    <button class="btn btn-default" id="btn_close" data-dismiss="modal" type="button">Cerrar</button> 
 
                 </div>
               

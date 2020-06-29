@@ -10,7 +10,7 @@
  <form class="form-horizontal span6" action="controller.php?action=add" method="POST" enctype="multipart/form-data"    >
  <div class="row">
          <div class="col-lg-12">
-            <h1 class="page-header">Add New Product</h1>
+            <h1 class="page-header">AGREGAR NUEVO PRODUCTO</h1>
           </div>
           <!-- /.col-lg-12 -->
        </div> 
@@ -18,11 +18,11 @@
               <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "OWNERNAME">Owner:</label>
+                      "OWNERNAME">PROVEEDOR:</label>
 
                       <div class="col-md-8">
                             <input class="form-control input-sm" id="OWNERNAME" name="OWNERNAME" placeholder=
-                            "Owner Name" type="text" value="">
+                            "Ingrese el nombre del proveedor" type="text" value="">
                       </div>
                     </div>
                   </div>  
@@ -30,11 +30,11 @@
                    <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "OWNERPHONE">Phone:</label>
+                      "OWNERPHONE">TELÉFONO:</label>
 
                       <div class="col-md-8">
                              <input class="form-control input-sm" id="OWNERPHONE" name="OWNERPHONE" placeholder=
-                            "+63 0000000000" type="number" value="">
+                            "(056) 956023456" type="number" value="">
                       </div>
                     </div>
                   </div> 
@@ -42,7 +42,7 @@
                  <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "PRODESC">Description:</label>
+                      "PRODESC">DESCRIPCIÓN:</label>
 
                       <div class="col-md-8"> 
                       <textarea class="form-control input-sm" id="PRODESC" name="PRODESC" cols="1" rows="3" ></textarea>
@@ -53,11 +53,11 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "CATEGORY">Category:</label>
+                      "CATEGORY">CATEGORÍA:</label>
 
                       <div class="col-md-8">
                        <select class="form-control input-sm" name="CATEGORY" id="CATEGORY">
-                          <option value="None">Select Category</option>
+                          <option value="None">Seleccionar Categoría</option>
                           <?php
                             //Statement
                           $mydb->setQuery("SELECT * FROM `tblcategory`");
@@ -76,18 +76,18 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "ORIGINALPRICE">Original Price:</label>
+                      "ORIGINALPRICE">COSTO:</label>
 
                       <div class="col-md-3">
                          <input class="form-control input-sm" id="ORIGINALPRICE" name="ORIGINALPRICE" placeholder=
-                            "Original Price" type="number" value=""  step="any">
+                            "&#36 Precio Costo" type="number" value=""  step="any">
                       </div>
                        <label class="col-md-2 control-label" for=
-                      "PROPRICE">Price:</label>
+                      "PROPRICE">PRECIO:</label>
 
                       <div class="col-md-3">
                          <input class="form-control input-sm" id="PROPRICE"  step="any" name="PROPRICE" placeholder=
-                            "&#36 Price " type="number" value="">
+                            "&#36 Precio Venta " type="number" value="">
                       </div>
                     </div>
                   </div>
@@ -95,11 +95,11 @@
                    <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "PROQTY">Quantity:</label>
+                      "PROQTY">CANTIDAD:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="PROQTY" name="PROQTY" placeholder=
-                            "Quantity" type="number" value="">
+                            "Stock en Inventario" type="number" value="">
                       </div>
                        
                     </div>
@@ -109,7 +109,7 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4" align = "right"for=
-                      "image">Upload Image:</label>
+                      "image">CARGAR IMAGEN:</label>
 
                       <div class="col-md-8">
                       <input type="file" name="image" value="" id="image"/>
@@ -123,7 +123,7 @@
                       "idno"></label>
 
                       <div class="col-md-8">
-                        <button class="btn  btn-primary btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span> Save</button>
+                        <button class="btn  btn-primary btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span> GRABAR</button>
                       </div>
                     </div>
                   </div>

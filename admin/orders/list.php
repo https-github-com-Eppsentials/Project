@@ -12,7 +12,7 @@
  
  	<div class="row">
        	 <div class="col-lg-12">
-            <h1 class="page-header">List of Orders</h1>
+            <h1 class="page-header">Lista de Pedidos</h1>
        		</div>
         	<!-- /.col-lg-12 -->
    		 </div>
@@ -23,13 +23,13 @@
 			 		<thead>
 			 		<tr >
 				  		<th>#</th>
-				  		<th>Order#</th>
-				  		<th>Customer</th>
-				  		<th>DateOrdered</th>	 
-				  		<th >Price</th>
-				  		<th >PaymentMethod</th>	
-				  		<th>Status</th>
-				  		<th width="100px">Action</th>
+				  		<th>Pedido#</th>
+				  		<th>Cliente</th>
+				  		<th>Fecha Orden</th>	 
+				  		<th >Precio</th>
+				  		<th >Método Pago</th>	
+				  		<th>Estado</th>
+				  		<th width="100px">Acción</th>
 				 
 				  	</tr>	
 			   		</thead>
@@ -54,29 +54,29 @@
 				  		echo '<td >'.$result->PAYMENTMETHOD .'</td>';
 				  		// echo '<td></td>';
 				  		echo '<td >'. $result->ORDEREDSTATS.'</td>';
-				  		if($result->ORDEREDSTATS=='Pending'){
-				  				echo '<td><a href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&customerid='.$result->CUSTOMERID.'&actions=cancel" class="btn btn-danger btn-xs">Cancel</a>
-				  				<a href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&customerid='.$result->CUSTOMERID.'&actions=confirm"  class="btn btn-primary btn-xs">Confirm</a></td>';
-			  	 		}elseif($result->ORDEREDSTATS=='Confirmed'){
-				  	 			echo '<td><a href="#"  class="btn btn-success btn-xs" disabled>Confirmed</a></td>';
+				  		if($result->ORDEREDSTATS=='Pendiente'){
+				  				echo '<td><a href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&customerid='.$result->CUSTOMERID.'&actions=cancel" class="btn btn-danger btn-xs">Cancelar</a>
+				  				<a href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&customerid='.$result->CUSTOMERID.'&actions=confirm"  class="btn btn-primary btn-xs">Confirmar</a></td>';
+			  	 		}elseif($result->ORDEREDSTATS=='Confirmado'){
+				  	 			echo '<td><a href="#"  class="btn btn-success btn-xs" disabled>Confirmado</a></td>';
 				  	 		 
 			  	 		}else{
-			  	 			 echo '<td> <a  href="#"  class="btn btn-danger btn-xs" disabled>Cancelled</a></td>';
+			  	 			 echo '<td> <a  href="#"  class="btn btn-danger btn-xs" disabled>Cancelado</a></td>';
 				
 			
 			  	 		} 
-				  		// if($result->ORDEREDSTATS=='Pending'){
+				  		// if($result->ORDEREDSTATS=='Pendiente'){
 				  		// 		echo '<td><a href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&actions=cancel" class="btn btn-danger btn-xs">Cancel</a>
-				  		// 		<a href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&actions=confirm"  class="btn btn-primary btn-xs">Confirm</a></td>';
-			  	 	// 	}elseif($result->ORDEREDSTATS=='Confirmed'){
+				  		// 		<a href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&actions=confirm"  class="btn btn-primary btn-xs">Confirmado</a></td>';
+			  	 	// 	}elseif($result->ORDEREDSTATS=='Confirmado'){
 				  	 // 			echo '<td><a href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&actions=cancel" class="btn btn-danger btn-xs">Cancel</a>
 				  		// 		<a href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&actions=deliver"  class="btn btn-success btn-xs">Deliver</a></td>';
 				  	 		
-			  	 	// 	}elseif($result->ORDEREDSTATS=='Delivered'){
-			  	 	// 		  echo '<td> <a  href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&actions=confirm"  class="btn btn-success btn-xs" disabled>Delivered</a></td>';
+			  	 	// 	}elseif($result->ORDEREDSTATS=='Entregado){
+			  	 	// 		  echo '<td> <a  href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&actions=confirm"  class="btn btn-success btn-xs" disabled>Entregado</a></td>';
 				
 			  	 	// 	}else{
-			  	 	// 		 echo '<td> <a  href="#"  class="btn btn-danger btn-xs" disabled>Cancelled</a></td>';
+			  	 	// 		 echo '<td> <a  href="#"  class="btn btn-danger btn-xs" disabled>Cancelado</a></td>';
 				
 			
 			  	 	// 	} 

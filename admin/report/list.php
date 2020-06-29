@@ -118,7 +118,7 @@
 <div class="row">
 <span id="printout">
 	<div class="col-md-12" >
-	<div class="page-header" style="text-align:center;" ><h1>List of Ordered Products</h1>
+	<div class="page-header" style="text-align:center;" ><h1>Reporte de Productos en Pedidos</h1>
 		<div>Inclusive Dates: From : <?php echo isset($_POST['date_pickerfrom']) ? $_POST['date_pickerfrom'] :'';?> - To : <?php echo isset($_POST['date_pickerto']) ? $_POST['date_pickerto'] : '';?> </div>
 	</div>
 		 
@@ -126,13 +126,13 @@
 		<table class="table table-bordered table-hover" align="center" cellspacing="10px">
 		<thead>
 			<tr bgcolor="skyblue" style="font-weight: bold;"> 
-				<td >Date Ordered</td>  
+				<td >Fecha Orden</td>  
 				<!-- <td >Customer</td> -->
-				<td >Product</td>
-				<td >Original Price</td>
-				<td >Price</td>
-				<td >Quantity</td> 
-				<td >Sub-total</td>
+				<td >Producto</td>
+				<td >Costo</td>
+				<td >Precio</td>
+				<td >Cantidad</td> 
+				<td >SubTotal</td>
 			</tr>
 
 		</thead>
@@ -148,7 +148,7 @@ if(isset($_POST['submit'])){
 
  // echo date_format(date_create($_POST['date_pickerfrom']),'Y-m-d');
 // echo $_POST['txtSearch'];
-// $query = "SELECT  *  FROM  `tblcustomer` c,  `tblsummary` s WHERE  c.`CUSTOMERID` = s.`CUSTOMERID` AND  ORDEREDSTATS='Confirmed' AND date(ORDEREDDATE)>='". date_format(date_create($_POST['date_pickerfrom']), "Y-m-d")."' AND date(ORDEREDDATE) <='". date_format(date_create($_POST['date_pickerto']), "Y-m-d")."'";
+// $query = "SELECT  *  FROM  `tblcustomer` c,  `tblsummary` s WHERE  c.`CUSTOMERID` = s.`CUSTOMERID` AND  ORDEREDSTATS='Confirmado' AND date(ORDEREDDATE)>='". date_format(date_create($_POST['date_pickerfrom']), "Y-m-d")."' AND date(ORDEREDDATE) <='". date_format(date_create($_POST['date_pickerto']), "Y-m-d")."'";
 // $query="SELECT *,SUM(ORDEREDQTY) as 'QTY'  FROM `tblproduct` P  ,`tblpromopro` PR ,`tblorder` O, `tblsummary` S ,`tblcustomer` C 
 // WHERE P.`PROID`=PR.`PROID` AND PR.`PROID`=O.`PROID` AND O.`ORDEREDNUM`=S.`ORDEREDNUM` AND S.`CUSTOMERID`=C.`CUSTOMERID`  
 // AND CONCAT(`PRODESC`, ' ' ,O.`ORDEREDNUM`, ' ' ,`FNAME`,' ', `LNAME`, ' ',`MNAME`) LIKE '%{$_POST['txtSearch']}%' AND DATE(ORDEREDDATE) >= '". date_format(date_create($_POST['date_pickerfrom']),'Y-m-d')."' 
@@ -163,7 +163,7 @@ AND DATE(ORDEREDDATE) <= '". date_format(date_create($_POST['date_pickerto']),'Y
 
 
 // $query = "SELECT  *  FROM  `tblcustomer` c,  `tblsummary` s 
-//            WHERE  c.`CUSTOMERID` = s.`CUSTOMERID` AND  ORDEREDSTATS='Confirmed' 
+//            WHERE  c.`CUSTOMERID` = s.`CUSTOMERID` AND  ORDEREDSTATS='Confirmado' 
 //            AND  date(ORDEREDDATE) >= '". date_format(date_create($_POST['date_pickerfrom']), "Y-m-d")."' 
 //            date(ORDEREDDATE) <= '". date_format(date_create($_POST['date_pickerto']), "Y-m-d")."'";
 
@@ -216,7 +216,7 @@ AND DATE(ORDEREDDATE) <= '". date_format(date_create($_POST['date_pickerto']),'Y
 	<div class="row">
 		<div class="col-md-12">
 			<div class="col-md-2"> 	
-			<button onclick="tablePrint();" class="btn btn-primary"><i class="fa fa-print"></i> Print Report</button>
+			<button onclick="tablePrint();" class="btn btn-primary"><i class="fa fa-print"></i> Imprimir Reporte</button>
  		</div>
 	  </div>
 	</div>
