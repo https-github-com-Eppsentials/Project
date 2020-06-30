@@ -30,6 +30,7 @@
  
 
 <?php
+  header('X-Frame-Options: DENY');
 if (isset($_SESSION['gcCart'])){
   if (@count($_SESSION['gcCart'])>0) {
     $cart = '<span class="carttxtactive">('.@count($_SESSION['gcCart']) .')</span>';
