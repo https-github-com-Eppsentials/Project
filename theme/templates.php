@@ -26,17 +26,18 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-</head><!--/head-->
+</head>  
  
 
 <?php
   header('X-Frame-Options: DENY');
-if (isset($_SESSION['gcCart'])){
-  if (@count($_SESSION['gcCart'])>0) {
-    $cart = '<span class="carttxtactive">('.@count($_SESSION['gcCart']) .')</span>';
+
+  if (isset($_SESSION['gcCart'])){
+    if (@count($_SESSION['gcCart'])>0) {
+      $cart = '<span class="carttxtactive">('.@count($_SESSION['gcCart']) .')</span>';
+    } 
+  
   } 
- 
-} 
  ?>
  
 <script type="text/javascript">

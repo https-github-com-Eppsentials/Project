@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('America/Lima');
 require_once ("../include/initialize.php");
-
+header('X-Frame-Options: DENY');
 $action = (isset($_GET['action']) && $_GET['action'] != '') ? $_GET['action'] : '';
 
 switch ($action) {
