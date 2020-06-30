@@ -84,10 +84,7 @@ function doInsert(){
 			 	$mydb->executeQuery(); */
 			 	 echo "<script> alert('You are now successfully registered. It will redirect to your profile.'); </script>";
 						redirect(web_root."index.php?q=profile");
-			 }
-		 
-		
-
+			 } 
 	  }
 	}
  

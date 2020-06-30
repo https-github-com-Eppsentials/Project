@@ -3,17 +3,15 @@ date_default_timezone_set('America/Lima');
 if (!isset($_SESSION['CUSID'])){
 redirect(web_root."index.php");
 }
- 
-
-     
+    
 
 $customerid =$_SESSION['CUSID'];
 $customer = New Customer();
 $singlecustomer = $customer->single_customer($customerid);
 
   ?>
- 
-<?php 
+
+  <?php 
   $autonumber = New Autonumber();
   $res = $autonumber->set_autonumber('ordernumber'); 
 ?>
