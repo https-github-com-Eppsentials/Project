@@ -145,10 +145,10 @@ if (isset($_POST['updateid'])){
                 
                                 if (isset($_SESSION['cus_id'])){  
                              
-                                  echo '<button type="submit"  name="proceed" id="proceed" class="btn btn_fixnmix pull-right"   ><strong>Proceed And Checkout</strong><span class="glyphicon glyphicon-chevron-right"></button>';
+                                  echo '<button type="submit"  name="proceed" id="proceed" class="btn btn_fixnmix pull-right"   ><strong>Proceder y Pagar</strong><span class="glyphicon glyphicon-chevron-right"></button>';
                                
                                  }else{
-                                   echo   '<button type="button" class="btn btn_fixnmix pull-right" data-target="#myModal" data-toggle="modal" name="btnorder"><strong>Proceed And Checkout</strong><span class="glyphicon glyphicon-chevron-right"></button>';
+                                   echo   '<button type="button" class="btn btn_fixnmix pull-right" data-target="#myModal" data-toggle="modal" name="btnorder"><strong>Proceder y Pagar</strong><span class="glyphicon glyphicon-chevron-right"></button>';
                                 } 
                               }
                                   echo '</form>'; 

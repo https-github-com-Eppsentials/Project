@@ -125,20 +125,20 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
        <hr/>
        <div class="row">
 		  	<div class="col-md-6 pull-left">
-		  	 <div>Ordered Date : <?php echo date_format(date_create($cur->ORDEREDDATE),"M/d/Y h:i:s"); ?></div> 
-		  		<div>Payment Method : <?php echo $cur->PAYMENTMETHOD; ?></div>
+		  	 <div>Fecha de Orden : <?php echo date_format(date_create($cur->ORDEREDDATE),"M/d/Y h:i:s"); ?></div> 
+		  		<div>Método de Pago : <?php echo $cur->PAYMENTMETHOD; ?></div>
 
 		  	</div>
 		  	<div class="col-md-6 pull-right">
-		  		<p align="right">Total Price : &#36 <?php echo number_format($subtot,2);?></p>
-		  		<p align="right">Delivery Fee : &#36 <?php echo number_format($cur->DELFEE,2); ?></p>
-		  		<p align="right">Overall Price : &#36 <?php echo number_format($cur->PAYMENT,2); ?></p>
+		  		<p align="right">Precio Total : &#36 <?php echo number_format($subtot,2);?></p>
+		  		<p align="right">Gastos de Envío : &#36 <?php echo number_format($cur->DELFEE,2); ?></p>
+		  		<p align="right">Precio Total : &#36 <?php echo number_format($cur->PAYMENT,2); ?></p>
 		  	</div>
 		  </div> 
 		</div>   
 		<div class="modal-footer">
 			<button class="btn btn_fixnmix" id="btnclose" data-dismiss="modal" type=
-			"button">Close</button>  
+			"button">Cerrar</button>  
 		</div>
 
 	</form>

@@ -120,7 +120,7 @@ $singlecustomer = $customer->single_customer($customerid);
          <div class="row">
                    <div class="col-md-7">
               <div class="form-group">
-                  <label> Payment Method : </label> 
+                  <label> Método de Pago: </label> 
                   <div class="radio" >
                       <label >
                           <input type="radio"  class="paymethod" name="paymethod" id="deliveryfee" value="Cash on Delivery" checked="true" data-toggle="collapse"  data-parent="#accordion" data-target="#collapseOne" >Cash on Delivery 

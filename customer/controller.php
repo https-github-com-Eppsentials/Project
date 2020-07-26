@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('America/Lima');
 require_once ("../include/initialize.php");
-header('X-Frame-Options: DENY');
+//header('X-Frame-Options: DENY');
 $action = (isset($_GET['action']) && $_GET['action'] != '') ? $_GET['action'] : '';
 
 switch ($action) {
@@ -77,11 +77,11 @@ function doInsert(){
 			  echo "<script> alert('You are now successfully registered. It will redirect to your order details.'); </script>";
 						redirect(web_root."index.php?q=orderdetails");
 			 }else{
-			 	/* $proid = $_GET['proid'];
+			 	$proid = $_GET['proid'];
 			 	$id = mysql_insert_id(); 
 			 	$query ="INSERT INTO `tblwishlist` (`PROID`, `CUSID`, `WISHDATE`, `WISHSTATS`)  VALUES ('{$proid}','{$id}','".DATE('Y-m-d')."',0)";
 			 	$mydb->setQuery($query);
-			 	$mydb->executeQuery(); */
+			 	$mydb->executeQuery(); 
 			 	 echo "<script> alert('You are now successfully registered. It will redirect to your profile.'); </script>";
 						redirect(web_root."index.php?q=profile");
 			 } 

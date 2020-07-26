@@ -8,7 +8,7 @@
 } 
 
 
-header('X-Frame-Options: DENY');
+//header('X-Frame-Options: DENY');
 if(isset($_POST['sidebarLogin'])){
   $email = trim($_POST['U_USERNAME']);
   $upass  = trim($_POST['U_PASS']);

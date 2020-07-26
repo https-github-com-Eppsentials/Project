@@ -3,7 +3,7 @@
       <div class="breadcrumbs">
         <ol class="breadcrumb">
           <li><a href="#">Casa</a></li>
-          <li class="active">Shopping Cart</li>
+          <li class="active">Carrito de Compras</li>
         </ol>
       </div>
       <div class="table-responsive cart_info"> 
@@ -18,10 +18,10 @@ check_message();
                          <table  class="table table-condensed" id="table" >
                          <thead> 
                           <tr class="cart_menu"> 
-                             <td  >Product</td>
-                             <td >Description</td>
-                             <td  width="15%" >Price</td>
-                             <td  width="15%" >Quantity</td> 
+                             <td  >Producto</td>
+                             <td >Descripción</td>
+                             <td  width="15%" >Precio</td>
+                             <td  width="15%" >Cantidad</td> 
                              <td  width="15%" >Total</td>  
                           </tr>
                          </thead>  
@@ -116,14 +116,14 @@ check_message();
 <section id="do_action">
     <div class="container">
       <div class="heading">
-        <h3>What would you like to do next?</h3>
-        <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
+        <h3>¿Qué te gustaría hacer después?</h3>
+        <p>Elija si tiene un código de descuento o puntos de recompensa que desea usar o si desea estimar el costo de envío.</p>
       </div>
       <div class="row">
      <form action="index.php?q=orderdetails" method="post">
    <a href="index.php?q=product" class="btn btn-default check_out pull-left ">
    <i class="fa fa-arrow-left fa-fw"></i>
-   Add New Order
+   Agregar nueva orden
    </a>
 
      <?php    
@@ -134,13 +134,13 @@ check_message();
                   if (isset($_SESSION['CUSID'])){  
                
                     echo '<button type="submit"  name="proceed" id="proceed" class="btn btn-default check_out btn-pup pull-right">
-                            Proceed And Checkout
+                            Proceder y Pagar
                             <i class="fa  fa-arrow-right fa-fw"></i>
                             </button>';
                  
                    }else{
                      echo   '<a data-target="#smyModal" data-toggle="modal" class="btn btn-default check_out signup pull-right" href="">
-                              Proceed And Checkout
+                              Proceder y Pagar
                               <i class="fa  fa-arrow-right fa-fw"></i>
                               </a>';
                   } 

@@ -162,8 +162,8 @@
               
                 </div>
                 </div>               
-                <a href="index.php?page=2" class="btn btn-default pull-left"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<strong>Add New Order</strong></a>
-                <a href="index.php?page=7" name="proceed"  class="btn btn_fixnmix pull-right"   ><strong>Proceed And Checkout</strong> <span class="glyphicon glyphicon-chevron-right"></span></a> 
+                <a href="index.php?page=2" class="btn btn-default pull-left"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<strong>Agregar nueva orden</strong></a>
+                <a href="index.php?page=7" name="proceed"  class="btn btn_fixnmix pull-right"   ><strong>Proceder y Pagar</strong> <span class="glyphicon glyphicon-chevron-right"></span></a> 
                 
             </div>
         </div>
