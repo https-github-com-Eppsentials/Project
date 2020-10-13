@@ -6,7 +6,7 @@
 //(\ for windows, / for Unix)
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 
-defined('SITE_ROOT') ? null : define ('SITE_ROOT', $_SERVER['DOCUMENT_ROOT'].DS.'appollo');
+defined('SITE_ROOT') ? null : define ('SITE_ROOT', $_SERVER['DOCUMENT_ROOT'].DS.'eppsentials');
 
 defined('LIB_PATH') ? null : define ('LIB_PATH',SITE_ROOT.DS.'include');
 
@@ -25,9 +25,5 @@ require_once(LIB_PATH.DS."customers.php");
 require_once(LIB_PATH.DS."orders.php");
 require_once(LIB_PATH.DS."summary.php");
 require_once(LIB_PATH.DS."settings.php");
-
-
-
-
 require_once(LIB_PATH.DS."database.php");
 ?>

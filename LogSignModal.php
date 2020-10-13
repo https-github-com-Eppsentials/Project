@@ -70,7 +70,7 @@
 
                        </div>
                         <div class="panel-footer">
-                             <p align="left">&copy; APPollo MoliService El Chotano E.I.R.L. </p>
+                             <p align="left">&copy; EPPSentials MICA & CIA S.A.C </p>
                         </div>
                     </div> 
                   </div>
@@ -80,7 +80,8 @@
                   <div class="tab-pane fade" id="profile">
                       <!-- <h4>Customer Details</h4>  --> 
 
-                           <form  class="form-horizontal span6" action="customer/controller.php?action=add" onsubmit="return personalInfo();" name="personal" method="POST" enctype="multipart/form-data">
+                           <form  class="form-horizontal span6" action="customer/controller.php?action=add"  name="personal" method="POST" enctype="multipart/form-data">
+                           <!--onsubmit="return personalInfo();"-->
                                 <div class="panel panel-pup">
                                     <div class="panel-heading">
                                        Detalles del Cliente

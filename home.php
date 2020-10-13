@@ -12,38 +12,38 @@
             <div class="carousel-inner">
               <div class="item active">
                 <div class="col-sm-6">
-                  <h1><span>MoliService</span> El Chotano</h1>
-                  <h2>ETAPA INICIO</h2>
-                  <p>Comercializamos todos los aditivos y vitaminas necesarias para el inicio de la alimentación de sus aves de engorde</p>
+                <h1><span>Mica &</span> CIA</h1>
+                  <h2>Mascarillas KN95</h2>
+                  <p>En Mica & CIA, ofrecemos las mascarillas KN95, las cuales cuentan con certificación y es recomendada para la protección contra el virus COVID-19.</p>
                  
                 </div>
                 <div class="col-sm-6">
-                  <img src="images/home/inicio.jpg" class="girl img-responsive" alt="" />
+                  <img src="images/home/inicio2.jpg" class="girl img-responsive" alt="" />
                   <img src="images/home/oferta.png"  class="pricing" alt=""  />
                 </div>
               </div>
               <div class="item">
                 <div class="col-sm-6">
-                <h1><span>MoliService</span> El Chotano</h1>
-                  <h2>ETAPA CRECIMIENTO</h2>
-                  <p>Contamos con los mejores Promotores de Crecimiento, Aminoácidos, Antioxidantes y mucho más para que acompañe al desarrollo de sus aves de engorde.</p>
+                <h1><span>Mica &</span> CIA</h1>
+                  <h2>Industria Alimentaria</h2>
+                  <p>En Mica & CIA, brindamos todos los implementos de seguridad y salubridad para la industria alimentaria. </p>
                  
                 </div>
                 <div class="col-sm-6">
-                  <img src="images/home/crecimiento.jpg" class="girl img-responsive" alt="" />
-                  <img src="images/home/oferta.png"  class="pricing" alt=""/>
+                  <img src="images/home/industrialimentaria.jpg" class="girl img-responsive" alt="" />
+                  <!--<img src="images/home/oferta.png"  class="pricing" alt=""/>-->
                 </div>
               </div>
               
               <div class="item">
                 <div class="col-sm-6">
-                <h1><span>MoliService</span> El Chotano</h1>
-                  <h2>ETAPA ACABADO</h2>
-                  <p>Los mejores productos para el finalizado de su producción, pigmentantes, secuestrantes de micotoxinas y demás, los encontrará aquí. ¡Qué espera! </p>
+                <h1><span>Mica &</span> CIA</h1>
+                  <h2>Mascaras Faciales</h2>
+                  <p>En Mica & CIA, puedes encontrar las máscaras faciales de mayor calidad. Indispensables para usar en transporte y lugares públicos</p>
                  
                 </div>
                 <div class="col-sm-6">
-                  <img src="images/home/finalizador.jpg" class="girl img-responsive" alt="" />
+                  <img src="images/home/mascarafacial.jpg" class="girl img-responsive" alt="" />
                   <img src="images/home/oferta.png" class="pricing" alt="" />
                 </div>
               </div>
@@ -112,7 +112,7 @@
                               <?php     
                             if (isset($_SESSION['CUSID'])){  
 
-                              echo ' <a href="'.web_root. 'customer/controller.php?action=addwish&proid='.$result->PROID.'" title="Agregar a Lista de Deseost"><i class="fa fa-plus-square"></i>Añadir a la Lista</a></a>
+                              echo ' <a href="'.web_root. 'customer/controller.php?action=addwish&proid='.$result->PROID.'" title="Agregar a Lista de Deseos"><i class="fa fa-plus-square"></i>Añadir a la Lista</a></a>
                             ';
 
                              }else{

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>APPollo - MoliService El Chotano</title>
+    <title>EPPSentials - MICA & CIA</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -20,7 +20,7 @@
 
     <link rel="shortcut icon" href="images/ico/favicon.ico">
 
-    <link rel="shortcut icon" href="images/home/favicon.ico">
+    <link rel="shortcut icon" href="images/home/hazmat.ico">
 
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -55,8 +55,8 @@
           <div class="col-sm-6">
             <div class="contactinfo">
               <ul class="nav nav-pills">
-                <li><a href="#"><i class="fa fa-phone"></i> (056)976325467</a></li>
-                <li><a href="#"><i class="fa fa-envelope"></i> molielchotano@gmail.com</a></li>
+                <li><a href="#"><i class="fa fa-phone"></i> (056)930136416</a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i> mica&cia@gmail.com</a></li>
               </ul>
             </div>
           </div>
@@ -80,7 +80,8 @@
         <div class="row">
           <div class="col-md-4 clearfix">
             <div class="logo pull-left">
-              <a href="<?php echo web_root?>"><img src="images/home/logo.png" alt="" /></a>
+              <!--<a href="<?php echo web_root?>"><img src="images/home/logo.png" alt="" /></a>-->
+              <a href="<?php echo web_root?>"><img src="images/home/LogoEPPS_xs.png" alt="" /></a>
             </div> 
           </div>
           <div class="col-md-8 clearfix">
@@ -163,15 +164,15 @@
         <div class="row">
           <div class="col-sm-2">
             <div class="companyinfo">
-              <h2><span>MoliService</span> El Chotano</h2>
-              <p>Empresa líder en la comercialización de insumos veterinarios</p>
+              <h2><span>MICA & CIA</h2>
+              <p>Empresa líder en la comercialización de productos de protección personal</p>
             </div>
           </div>
           <div class="col-sm-7">
             <div class="col-sm-6">
               <div class="video-gallery text-center">
                 <a href="#"> 
-                    <iframe class="iframe-img"  src="https://www.youtube.com/embed/su7RcTJUrmw"   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                    <iframe class="iframe-img"  src="https://www.youtube.com/embed/YDqUl6-BYBI"   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
                 </a> 
               </div>
             </div>
@@ -179,7 +180,7 @@
             <div class="col-sm-6">
               <div class="video-gallery text-center">
                 <a href="#"> 
-                   <iframe  class="iframe-img"  src="https://www.youtube.com/embed/LvYK-SHCEzc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                   <iframe  class="iframe-img"  src="https://www.youtube.com/embed/EN6LmV-Jjwk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
                 </a> 
               </div>
             </div>
@@ -187,7 +188,7 @@
           <div class="col-sm-3">
             <div class="address">
               <img src="images/home/map.png" alt="" />
-              <p>Carretera a Alto Larán km 5.5, Chincha-Ica-Perú</p>
+              <p>Lima-Callao-Perú</p>
             </div>
           </div>
         </div>
@@ -257,7 +258,7 @@
     <div class="footer-bottom">
       <div class="container">
         <div class="row">        
-          <p class="pull-right">Desarrollado por: <span>E.Y.Y.A. CorpSoftware S.A.C.</span></p>
+          <p class="pull-right">Desarrollado por: <span>WYVA CorpSoftware S.A.C.</span></p>
         </div>
       </div>
     </div>
