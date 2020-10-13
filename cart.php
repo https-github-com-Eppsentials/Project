@@ -12,7 +12,7 @@
   // if (!isset($_SESSION['USERID'])){
   //     redirect("index.php"); 
 check_message();  
- 
+ //.
 ?>
             
                          <table  class="table table-condensed" id="table" >

@@ -8,7 +8,7 @@ date_default_timezone_set('America/Lima');
 $content='home.php';
 $view = (isset($_GET['q']) && $_GET['q'] != '') ? $_GET['q'] : '';
 
-
+//Se va a decidir que tipo de vista se inicializa 
  
 
 switch ($view) {

@@ -1,3 +1,4 @@
+ <!--Fragmento de página de contacto-->
  <div id="contact-page" class="container">
         <div class="bg">
             <div class="row">           

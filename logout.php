@@ -17,7 +17,7 @@ unset($_SESSION['gcCart']);
 unset( $_SESSION['fixnmixConfiremd']);
 unset($_SESSION['gcNotify']);
 unset($_SESSION['orderdetails']);
-
+//
 // unset($_SESSION['FIRSTNAME']);
 // unset($_SESSION['LASTNAME']);
 // unset($_SESSION['ADDRESS']);

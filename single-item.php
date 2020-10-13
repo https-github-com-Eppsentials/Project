@@ -98,5 +98,5 @@ $query = "SELECT * FROM `tblpromopro` pr , `tblproduct` p , `tblcategory` c
                     <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
                 </a>
             </div> -->
-
+<!--.-->
         </div>

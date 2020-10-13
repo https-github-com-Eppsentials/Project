@@ -7,7 +7,7 @@
   foreach ($cur as $result) {
   $maxrow = $result->counts; 
   }
- 
+ //.
 ?>
  
 

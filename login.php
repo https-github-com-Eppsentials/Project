@@ -7,7 +7,7 @@
     // // unset($_SESSION['TOTAL']);
 } 
 
-
+//Se va a instanciar el nombre de usuario y la contraseña
 //header('X-Frame-Options: DENY');
 if(isset($_POST['sidebarLogin'])){
   $email = trim($_POST['U_USERNAME']);

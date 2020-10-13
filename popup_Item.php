@@ -17,7 +17,7 @@ $query = "SELECT * FROM `tblpromopro` pr , `tblproduct` p , `tblcategory` c
  ?>
 
 
-        <!-- Portfolio Item Row -->
+        <!-- Portfolio Item Fila -->
    <form   method="POST" action="cart/controller.php?action=add">
         
         <div class="row">

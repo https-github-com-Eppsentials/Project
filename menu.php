@@ -81,6 +81,7 @@
               </div>
             </div>
           </form>
+          <!--Mensaje en caso no exista productos asociados-->
        <?php  } 
 
 

@@ -36,9 +36,9 @@
  
 	}
 	if (isset($_POST['validatecode-submit'])) {
-		# code... 
+		# code... .
 		if ($_SESSION['recovery_code']==$_POST['resetcode']) {
-			# code...
+			# code... .
 	   		redirect('passwordrecover.php?resetpassword');
 		}else{
 			$codemessage = '<p>Your code is incorrect.</p>';
